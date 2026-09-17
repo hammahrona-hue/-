@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>心理学12 · 十站通关 —— 一本小学生也能看懂的行为主义手册</title>
+<style>
+:root{
+  --bg:#f5f5f7; --bg2:#ffffff;
+  --ink:#1d1d1f; --ink2:#48484a; --ink3:#86868b;
+  --line:rgba(0,0,0,.08); --line2:rgba(0,0,0,.14);
+  --glass:rgba(255,255,255,.62); --glass2:rgba(255,255,255,.82);
+  --hi:rgba(255,255,255,.9);
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -12px rgba(0,0,0,.14);
+  --blue:#0071e3; --blue-s:rgba(0,113,227,.10);
+  --indigo:#5e5ce6; --indigo-s:rgba(94,92,230,.10);
+  --teal:#00a8b5; --teal-s:rgba(0,168,181,.10);
+  --mint:#1fa971; --mint-s:rgba(31,169,113,.10);
+  --orange:#f0730a; --orange-s:rgba(240,115,10,.10);
+  --pink:#e0367a; --pink-s:rgba(224,54,122,.10);
+  --purple:#a550d8; --purple-s:rgba(165,80,216,.10);
+  --yellow:#f5b400; --yellow-s:rgba(245,180,0,.14);
+  --red:#e5322d; --red-s:rgba(229,50,45,.10);
+  --r:26px; --r2:18px; --r3:12px;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","PingFang SC","Hiragino Sans GB","HarmonyOS Sans SC","Microsoft YaHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#000; --bg2:#1c1c1e; --ink:#f5f5f7; --ink2:#d1d1d6; --ink3:#8e8e93;
+    --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.18);
+    --glass:rgba(28,28,30,.62); --glass2:rgba(44,44,46,.78); --hi:rgba(255,255,255,.08);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -12px rgba(0,0,0,.6);
+    --blue:#2997ff; --indigo:#7d7aff; --teal:#3fd2dc; --mint:#3ad089; --orange:#ff9f0a; --pink:#ff6482; --purple:#c979f0; --yellow:#ffd60a; --red:#ff453a;
+    --blue-s:rgba(41,151,255,.16); --indigo-s:rgba(125,122,255,.16); --teal-s:rgba(63,210,220,.14); --mint-s:rgba(58,208,137,.14); --orange-s:rgba(255,159,10,.16); --pink-s:rgba(255,100,130,.16); --purple-s:rgba(201,121,240,.16); --yellow-s:rgba(255,214,10,.16); --red-s:rgba(255,69,58,.16);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(38% 34% at 12% 14%,rgba(0,113,227,.16),transparent 70%),
+    radial-gradient(34% 30% at 88% 10%,rgba(165,80,216,.14),transparent 70%),
+    radial-gradient(40% 36% at 78% 86%,rgba(31,169,113,.14),transparent 70%),
+    radial-gradient(30% 30% at 20% 90%,rgba(240,115,10,.12),transparent 70%);
+  filter:blur(40px)}
+a{color:var(--blue);text-decoration:none}
+b,strong{font-weight:700}
+p{margin:.5em 0}
+ul,ol{padding-left:1.35em;margin:.4em 0}
+li{margin:.25em 0}
+mark{background:var(--yellow-s);color:inherit;border-radius:6px;padding:0 .25em;box-shadow:inset 0 -2px 0 var(--yellow)}
+kbd{font:inherit;font-weight:700;color:var(--blue)}
+code{font-family:inherit;background:var(--blue-s);border-radius:8px;padding:.05em .45em;font-size:.95em}
+.small{font-size:.9em;color:var(--ink3)}
+.center{text-align:center}
+.hide{display:none!important}
+
+/* ===== 顶栏 ===== */
+.topbar{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);
+  background:var(--glass);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 20px}
+.brand{font-weight:800;font-size:15px;letter-spacing:.01em;white-space:nowrap}
+.brand small{color:var(--ink3);font-weight:600;margin-left:8px}
+.prog{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden;position:relative}
+.prog i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--purple));transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.prog-txt{font-size:13px;color:var(--ink3);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.btn{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:999px;padding:10px 18px;color:#fff;background:var(--blue);
+  box-shadow:0 6px 18px -6px rgba(0,113,227,.55);transition:transform .15s,box-shadow .15s,filter .15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn.ghost{background:var(--glass2);color:var(--ink);box-shadow:none;border:1px solid var(--line2)}
+.btn.sm{padding:6px 12px;font-size:13px}
+
+/* ===== 布局 ===== */
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;padding:22px 20px 120px}
+.side{position:sticky;top:64px;align-self:start;max-height:calc(100vh - 80px);overflow-y:auto;padding:6px 0}
+.side h4{margin:8px 10px;font-size:11px;letter-spacing:.14em;color:var(--ink3);font-weight:800}
+.side a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px;color:var(--ink2);font-size:14px;line-height:1.35;transition:background .15s}
+.side a:hover{background:var(--glass2)}
+.side a.cur{background:var(--glass2);color:var(--ink);font-weight:700;box-shadow:var(--shadow)}
+.side a .n{flex:0 0 26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff;background:var(--ink3)}
+.side a.ok .n{background:var(--mint)}
+.side a.ok .n:after{content:"✓"}
+.side a.ok .n span{display:none}
+.main{min-width:0}
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr;padding:14px 12px 120px;gap:14px}
+  .side{position:static;max-height:none;display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+  .side::-webkit-scrollbar{display:none}
+  .side h4{display:none}
+  .side a{white-space:nowrap;background:var(--glass2);border:1px solid var(--line)}
+  body{font-size:16.5px}
+}
+
+/* ===== 卡片 · Liquid Glass ===== */
+.card{position:relative;background:var(--glass);backdrop-filter:saturate(160%) blur(18px);-webkit-backdrop-filter:saturate(160%) blur(18px);
+  border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:26px 28px;margin:18px 0;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--hi),transparent);pointer-events:none}
+@media (max-width:600px){.card{padding:20px 18px;border-radius:22px}}
+
+/* 封面 */
+.hero{padding:52px 40px 44px;text-align:left;background:linear-gradient(135deg,rgba(255,255,255,.75),rgba(255,255,255,.35));}
+@media (prefers-color-scheme: dark){.hero{background:linear-gradient(135deg,rgba(44,44,46,.8),rgba(28,28,30,.5))}}
+.hero .eyebrow{font-size:13px;font-weight:800;letter-spacing:.16em;color:var(--blue);text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.12;letter-spacing:-.02em;margin:10px 0 12px;font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;color:var(--ink2);max-width:640px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stat{background:var(--glass2);border:1px solid var(--line);border-radius:16px;padding:10px 16px;font-size:14px;color:var(--ink2)}
+.stat b{display:block;font-size:22px;color:var(--ink);letter-spacing:-.01em}
+
+/* 站 */
+.station{scroll-margin-top:80px}
+.st-head{display:flex;gap:16px;align-items:flex-start;margin:44px 0 6px}
+.st-num{flex:0 0 auto;display:inline-grid;place-items:center;width:58px;height:58px;border-radius:20px;color:#fff;font-weight:900;font-size:13px;line-height:1.1;text-align:center;
+  background:linear-gradient(145deg,var(--c1,var(--blue)),var(--c2,var(--indigo)));box-shadow:0 10px 26px -10px var(--c1,var(--blue))}
+.st-head h2{margin:0;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.02em;line-height:1.2;font-weight:800}
+.st-head .st-sub{margin:4px 0 0;color:var(--ink3);font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.04em;padding:3px 10px;border-radius:999px;background:var(--blue-s);color:var(--blue);vertical-align:middle;margin-left:6px}
+.tag.hot{background:var(--red-s);color:var(--red)}
+.tag.warn{background:var(--orange-s);color:var(--orange)}
+
+/* 区块 */
+.blk{border-radius:var(--r2);padding:16px 20px;margin:14px 0;border:1px solid var(--line);position:relative;background:var(--bg2)}
+.blk>.lab{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:.08em;padding:2px 10px;border-radius:999px;margin:-4px 0 8px -4px}
+.story{background:linear-gradient(135deg,var(--indigo-s),var(--purple-s));border-color:transparent}
+.story>.lab{background:var(--indigo);color:#fff}
+.plain{background:var(--yellow-s);border-color:transparent}
+.plain>.lab{background:var(--yellow);color:#3a2a00}
+.meta{background:var(--mint-s);border-color:transparent}
+.meta>.lab{background:var(--mint);color:#fff}
+.term{background:var(--blue-s);border-color:transparent}
+.term>.lab{background:var(--blue);color:#fff}
+.board{background:var(--bg2);border:1px dashed var(--line2)}
+.board>.lab{background:var(--ink);color:var(--bg)}
+.board .ppt{font-size:15px;color:var(--ink2);line-height:1.7;margin:0;font-family:inherit;white-space:pre-wrap}
+.hook{background:var(--purple-s);border-color:transparent}
+.hook>.lab{background:var(--purple);color:#fff}
+.trap{background:var(--red-s);border-color:transparent}
+.trap>.lab{background:var(--red);color:#fff}
+.exam{background:var(--teal-s);border-color:transparent}
+.exam>.lab{background:var(--teal);color:#fff}
+.teacher{background:var(--orange-s);border-color:transparent}
+.teacher>.lab{background:var(--orange);color:#fff}
+.review{background:var(--glass2);border:1px solid var(--line2)}
+.review>.lab{background:var(--ink3);color:#fff}
+
+.kp{margin:26px 0 8px}
+.kp h3{margin:0 0 4px;font-size:21px;letter-spacing:-.01em;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kp h3 .kid{font-size:12px;color:var(--ink3);font-weight:700;background:var(--line);padding:1px 8px;border-radius:99px}
+.kp .one{color:var(--ink2);margin:0 0 6px;font-size:16px}
+
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;margin:10px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--glass2);font-weight:800;font-size:13.5px;color:var(--ink2)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700}
+.tbl-wrap{overflow-x:auto}
+
+/* 图 */
+figure{margin:14px 0}
+figure svg{width:100%;height:auto;display:block;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--line)}
+figcaption{font-size:13.5px;color:var(--ink3);margin-top:6px;text-align:center}
+svg text{font-family:var(--sans)}
+
+/* 自测题 */
+.quiz{background:var(--bg2);border:1px solid var(--line2);border-radius:var(--r2);padding:16px 18px;margin:14px 0}
+.quiz .src{font-size:12px;font-weight:800;color:var(--teal);letter-spacing:.06em}
+.quiz .q{margin:4px 0 10px;font-weight:600}
+.quiz .opts{display:grid;gap:8px}
+.quiz .opt{appearance:none;font:inherit;text-align:left;cursor:pointer;border:1px solid var(--line2);background:var(--glass2);color:var(--ink);border-radius:14px;padding:10px 14px;line-height:1.5;transition:all .15s;display:flex;gap:10px}
+.quiz .opt:hover{border-color:var(--blue);background:var(--blue-s)}
+.quiz .opt i{flex:0 0 24px;height:24px;border-radius:8px;display:grid;place-items:center;font-size:12px;font-weight:800;font-style:normal;background:var(--line);color:var(--ink2)}
+.quiz.done .opt{cursor:default}
+.quiz .opt.right{border-color:var(--mint);background:var(--mint-s)}
+.quiz .opt.right i{background:var(--mint);color:#fff}
+.quiz .opt.wrong{border-color:var(--red);background:var(--red-s)}
+.quiz .opt.wrong i{background:var(--red);color:#fff}
+.quiz .why{display:none;margin-top:12px;padding:12px 14px;border-radius:14px;background:var(--orange-s);border-left:4px solid var(--orange);font-size:15.5px}
+.quiz.done .why{display:block;animation:pop .35s ease}
+.quiz .why .step{display:block;margin:.2em 0}
+.quiz .why .step b{color:var(--orange)}
+.quiz .verdict{display:none;font-weight:800;margin-top:10px}
+.quiz.done .verdict{display:block}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* 自己考自己 */
+.rc{border:1px solid var(--line2);border-radius:14px;background:var(--glass2);margin:8px 0;overflow:hidden}
+.rc summary{cursor:pointer;list-style:none;padding:11px 14px;font-weight:700;display:flex;gap:10px;align-items:center}
+.rc summary::-webkit-details-marker{display:none}
+.rc summary:before{content:"？";flex:0 0 24px;height:24px;border-radius:8px;display:grid;place-items:center;background:var(--indigo);color:#fff;font-size:13px}
+.rc[open] summary:before{content:"✓";background:var(--mint)}
+.rc .ans{padding:0 14px 12px 48px;color:var(--ink2);font-size:15.5px;animation:pop .3s ease}
+
+/* 完成按钮 */
+.done-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 6px}
+.done-row .msg{color:var(--mint);font-weight:700;display:none}
+.station.ok .done-row .msg{display:inline}
+.station.ok .done-row .btn.done{background:var(--mint);box-shadow:none}
+
+/* 小组件 */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.pill{border-radius:999px;padding:5px 12px;font-size:14px;font-weight:700;background:var(--glass2);border:1px solid var(--line2)}
+.pill.b{background:var(--blue-s);color:var(--blue);border-color:transparent}
+.pill.g{background:var(--mint-s);color:var(--mint);border-color:transparent}
+.pill.o{background:var(--orange-s);color:var(--orange);border-color:transparent}
+.pill.p{background:var(--purple-s);color:var(--purple);border-color:transparent}
+.pill.r{background:var(--red-s);color:var(--red);border-color:transparent}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.mini{border-radius:var(--r2);padding:14px 16px;border:1px solid var(--line);background:var(--glass2)}
+.mini h4{margin:0 0 4px;font-size:16px}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch}
+.vs .m{font-weight:900;color:var(--ink3);align-self:center}
+@media (max-width:640px){.vs{grid-template-columns:1fr}.vs .m{text-align:center}}
+.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0}
+.steps li{position:relative;padding-left:40px;margin:8px 0}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:10px;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:800;font-size:13px}
+.quote{border-left:4px solid var(--orange);padding:6px 14px;margin:10px 0;color:var(--ink2);background:var(--orange-s);border-radius:0 14px 14px 0;font-size:15.5px}
+.quote:before{content:"彤彤老师原话 · ";font-weight:800;color:var(--orange);font-size:12px;letter-spacing:.06em}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:99;transition:all .35s;box-shadow:var(--shadow)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.final-score{font-size:42px;font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+footer{color:var(--ink3);font-size:13px;text-align:center;padding:30px 0 0}
+@media print{.topbar,.side,.done-row{display:none}.card{box-shadow:none;backdrop-filter:none;background:#fff}body:before{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <div class="brand">心理学12 · 十站通关<small>行为主义（上）</small></div>
+  <div class="prog"><i id="progbar"></i></div>
+  <div class="prog-txt" id="progtxt">0 / 10 站</div>
+</div></div>
+<div class="wrap">
+<nav class="side" id="sidenav">
+  <h4>路线图</h4>
+  <a href="#s0" data-s="0"><span class="n"><span>0</span></span>出发前：这讲学什么</a>
+  <a href="#s1" data-s="1"><span class="n"><span>1</span></span>奥苏贝尔：两把尺子</a>
+  <a href="#s2" data-s="2"><span class="n"><span>2</span></span>加涅：一张榜单一座梯</a>
+  <a href="#s3" data-s="3"><span class="n"><span>3</span></span>其他分法 + 8 道真题</a>
+  <a href="#s4" data-s="4"><span class="n"><span>4</span></span>四大流派：先认人</a>
+  <a href="#s5" data-s="5"><span class="n"><span>5</span></span>行为主义 & 华生</a>
+  <a href="#s6" data-s="6"><span class="n"><span>6</span></span>桑代克：饿猫与三条律</a>
+  <a href="#s7" data-s="7"><span class="n"><span>7</span></span>巴甫洛夫：狗与铃声</a>
+  <a href="#s8" data-s="8"><span class="n"><span>8</span></span>信号系统：有没有说话</a>
+  <a href="#s9" data-s="9"><span class="n"><span>9</span></span>四个规律 + 溯源拔高</a>
+  <a href="#s10" data-s="10"><span class="n"><span>10</span></span>终点站：三天后自测</a>
+</nav>
+<main class="main">
+<section class="card hero" id="top">
+  <div class="eyebrow">2026 四川教师公招 · 教育心理学 · 心理学 12</div>
+  <h1>把行为主义讲成<span>一个你忘不掉的故事</span></h1>
+  <p class="lead">这一讲 2 小时 42 分，彤彤老师讲了三件事：<b>学习怎么分类</b>、<b>四大流派先认人</b>、<b>行为主义的两位大佬（桑代克的猫、巴甫洛夫的狗）</b>。我把它拆成 <b>10 站</b>，每站先讲故事、再说人话、再教你怎么在考场上选对。读完每一站，点一下「这站我通了」，进度条会陪你走到终点。</p>
+  <div class="stats">
+    <div class="stat"><b>10 站</b>按老师讲课顺序</div>
+    <div class="stat"><b>128 个</b>知识点全部收录</div>
+    <div class="stat"><b>34 道</b>课上真题 + 老师解法</div>
+    <div class="stat"><b>0 个</b>没讲的内容（斯金纳等留给下一讲）</div>
+  </div>
+  <div class="blk meta" style="margin-top:22px">
+    <span class="lab">怎么用这本手册</span>
+    <ol class="steps">
+      <li><b>紫色「先听个故事」</b>是入口。别跳过，故事就是记忆的钩子，三天后你想起故事就想起知识点。</li>
+      <li><b>黄色「说人话」</b>是翻译。所有术语都用不超过初中水平的话重说一遍，然后才告诉你考试写哪个词。</li>
+      <li><b>青色「考场上怎么选」</b>+ 每道真题的「老师解法」：老师课上的「第一步看什么、第二步看什么」全在这里。</li>
+      <li><b>红色「坑」</b>是历年考生真栽过的地方，读的时候慢一点。</li>
+      <li>每站结尾有<b>「自己考自己」</b>——先别点开，自己说一遍答案再核对。说不出来就回去再看一眼故事。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 站 0 ============ -->
+<section class="card station" id="s0" data-s="0" style="--c1:#8e8e93;--c2:#48484a">
+  <div class="st-head"><div class="st-num">出发<br>站</div><div><h2>这一讲到底学什么？<span class="tag">先定位</span></h2><p class="st-sub">对应视频 00:22 ~ 33:20 的开场 & 「学习」的复习</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事</span>
+    <p>想象你走进一家<b>「学习」主题的博物馆</b>。一楼是「学习分类馆」——四位馆长（奥苏贝尔、加涅、阿瑟雷伯、我国学者）各自用自己的标准把「学习」这件事分了类。二楼是「学习理论馆」，有四个展厅：行为、认知、建构、人本。这一讲，老师只带我们逛完一楼，再进二楼第一个展厅「行为主义」，看两位大佬的实验：<b>桑代克的猫</b>和<b>巴甫洛夫的狗</b>。至于斯金纳的小白鼠和班杜拉的宝宝，老师原话「明天讲」——所以这本手册里也<b>不会出现</b>它们的内容，别去别处硬补。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">0.2</span>先复习：什么叫「学习」？</h3>
+    <p class="one">个体（人、动物）在一定条件下，凭借<b>经验或练习</b>，产生的<b>行为或行为潜能</b>的<b>比较持久</b>的变化。</p></div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>三个词就够：<b>练出来的</b>（不是天生的）、<b>变了</b>（行为或者「以后会这么做」的可能性）、<b>持久</b>（不是一时的）。</p>
+    <p>注意「行为潜能」四个字：你今天上课后<b>心里更爱一个人了</b>但没表现出来，这也是学习——所以老师说「学习<b>不一定能观察到</b>」。考判断：「学习是可观察的行为变化」→ <b>错</b>。</p>
+  </div>
+  <div class="blk plain"><span class="lab">哪些不是学习？</span>
+    <div class="pill-row"><span class="pill r">膝跳反射 ✕ 本能</span><span class="pill r">疲劳后动作变形 ✕ 生理</span><span class="pill r">暗适应 ✕ 生理</span><span class="pill g">背诵唐诗 ✓ 学习</span></div>
+    <p class="small">一句话记：<b>天生就会的、身体累出来的，都不算学习。</b></p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">0.4</span>人和动物的学习有什么区别？</h3>
+    <p class="one">人的学习靠<b>语言</b>和<b>复杂的认知（思维）</b>；动物只是训练出「刺激→反应」。</p></div>
+  <div class="blk exam"><span class="lab">真题 · 2024 四川下</span>
+    <p>阿杰通过书籍和网上教程学会了编程，还和同学讨论、参加比赛；阿杰养的小狗经过多次训练，学会了听见铃声就到饭碗前等食物。下列说法正确的是：</p>
+    <p>A. 阿杰的学习是通过条件反射获得的　B. 阿杰和小狗的学习方式没有本质区别<br>C. 阿杰和小狗都通过模仿同伴学习　D. 阿杰的学习依赖于语言和复杂的认知能力</p>
+    <div class="blk teacher" style="margin:10px 0 0"><span class="lab">老师解法</span>
+      <ol class="steps">
+        <li><b>先读题，再判断考点</b>：一人一狗放在一起 → 考「人和动物学习的区别」。</li>
+        <li>阿杰用了书籍、教程、讨论 → 全是<b>语言</b>；理解逻辑 → <b>思维</b>（认知过程里最高级的那个）。</li>
+        <li>小狗：铃声（别人给的）→ 到碗前等（它做的），<b>刺激在前、反应在后</b>，多次训练建立联结，这才是条件反射。所以 A 错（阿杰不是）、B 错（有本质区别）、C 错（谁也没模仿榜样）。</li>
+        <li>答案 <b>D</b>。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="blk hook"><span class="lab">记住这个做题总规矩</span>
+    <p>老师这节课反复说的两句话，后面每一站都会用到：</p>
+    <p>① <b>「刺激是别人给的，反应是他自己做的。」</b>——铃声是别人给的，流口水是狗做的。</p>
+    <p>② <b>「一道题上来，第一件事读题，第二件事判断它考哪个知识点。」</b>不许加戏、不许自己延伸题目没说的内容。</p>
+  </div>
+
+  <div class="blk review"><span class="lab">自己考自己</span>
+    <details class="rc"><summary>学习的定义里，哪四个字说明「学习不一定看得见」？</summary><div class="ans">「行为潜能」。态度、认知、情感的变化可能不表现出来，但也是学习。</div></details>
+    <details class="rc"><summary>膝跳反射、暗适应为什么不算学习？</summary><div class="ans">它们是本能 / 生理变化，不是凭借经验或练习产生的。</div></details>
+    <details class="rc"><summary>人和动物学习的本质区别是什么？</summary><div class="ans">人依赖语言和复杂的认知（思维）；动物是单纯的刺激—反应训练。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(0)">这站我通了 ✓</button><span class="msg">出发！进度已记录</span></div>
+</section>
+<!-- ============ 站 1 ============ -->
+<section class="card station" id="s1" data-s="1" style="--c1:#0071e3;--c2:#5e5ce6">
+  <div class="st-head"><div class="st-num">第<br>1 站</div><div><h2>奥苏贝尔：两把尺子量一次学习<span class="tag hot">例子题为主</span></h2><p class="st-sub">对应视频 00:43 ~ 12:04 · 幻灯片 S001 ~ S004</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事</span>
+    <p>你家小侄子学会了「二八十六」。奥苏贝尔走过来，只掏出<b>两把尺子</b>量他：</p>
+    <p><b>第一把尺子问：这东西是谁给的？</b>是老师把结论直接塞给他（<b>接受</b>），还是他自己在数积木时琢磨出来的（<b>发现</b>）？</p>
+    <p><b>第二把尺子问：他懂了没？</b>他知道「二八十六」和「八二十六」其实是一回事，说明新知识和他脑子里旧的东西<b>接上了</b>（<b>有意义</b>）；他只是像念咒一样背下来，脑子里啥也没接上（<b>机械</b>）。</p>
+    <p>两把尺子<b>各量各的，互不干涉</b>。所以一共能量出 4 种组合——就像身高和体重，高的人不一定重。</p>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 360" role="img" aria-label="奥苏贝尔两个维度四种学习矩阵">
+      <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#0071e3"/><stop offset="1" stop-color="#5e5ce6"/></linearGradient></defs>
+      <text x="360" y="30" text-anchor="middle" font-size="15" font-weight="800" fill="#1d1d1f">第一把尺子：谁给的？（学习方式）</text>
+      <text x="26" y="200" font-size="15" font-weight="800" fill="#1d1d1f" transform="rotate(-90 26 200)" text-anchor="middle">第二把尺子：懂了没？</text>
+      <rect x="230" y="48" width="220" height="40" rx="12" fill="rgba(0,113,227,.12)"/><text x="340" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#0071e3">接受学习 · 别人给结论</text>
+      <rect x="470" y="48" width="220" height="40" rx="12" fill="rgba(94,92,230,.12)"/><text x="580" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#5e5ce6">发现学习 · 自己探索</text>
+      <rect x="60" y="104" width="160" height="110" rx="12" fill="rgba(31,169,113,.12)"/><text x="140" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#1fa971">有意义学习</text><text x="140" y="172" text-anchor="middle" font-size="12" fill="#48484a">新旧接上了 = 理解</text>
+      <rect x="60" y="226" width="160" height="110" rx="12" fill="rgba(229,50,45,.12)"/><text x="140" y="272" text-anchor="middle" font-size="14" font-weight="700" fill="#e5322d">机械学习</text><text x="140" y="294" text-anchor="middle" font-size="12" fill="#48484a">接不上 = 不理解</text>
+      <rect x="230" y="104" width="220" height="110" rx="14" fill="#fff" stroke="#e5e5ea"/><text x="340" y="134" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d1d1f">有意义的接受</text><text x="340" y="158" text-anchor="middle" font-size="12" fill="#48484a">听讲座，理解了概念关系</text><text x="340" y="178" text-anchor="middle" font-size="12" fill="#48484a">听导师精心设计的指导 → 弄清</text><text x="340" y="200" text-anchor="middle" font-size="12" fill="#0071e3" font-weight="700">★ 奥苏贝尔最提倡</text>
+      <rect x="470" y="104" width="220" height="110" rx="14" fill="#fff" stroke="#e5e5ea"/><text x="580" y="134" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d1d1f">有意义的发现</text><text x="580" y="158" text-anchor="middle" font-size="12" fill="#48484a">科学研究、自己写论文并理解</text><text x="580" y="178" text-anchor="middle" font-size="12" fill="#48484a">做实验且明白操作原理</text>
+      <rect x="230" y="226" width="220" height="110" rx="14" fill="#fff" stroke="#e5e5ea"/><text x="340" y="256" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d1d1f">机械的接受</text><text x="340" y="280" text-anchor="middle" font-size="12" fill="#48484a">死记硬背乘法表</text><text x="340" y="300" text-anchor="middle" font-size="12" fill="#48484a">背古诗不懂意思 · 套公式不懂</text>
+      <rect x="470" y="226" width="220" height="110" rx="14" fill="#fff" stroke="#e5e5ea"/><text x="580" y="256" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d1d1f">机械的发现</text><text x="580" y="280" text-anchor="middle" font-size="12" fill="#48484a">走迷宫（不理解线路）</text><text x="580" y="300" text-anchor="middle" font-size="12" fill="#48484a">尝试与错误 · 例行操作不懂原理</text>
+    </svg>
+    <figcaption>老师 S001「理解梳理」那页的 2×3 矩阵，我压成 2×2。老师原例：弄清概念 / 听讲演 / 学校实验 / 例行研究 / 毕业论文 / 科学研究 / 记乘法表 / 运用公式 / 迷宫 / 尝试与错误。</figcaption>
+  </figure>
+
+  <div class="kp"><h3><span class="kid">1.2 / 1.3</span>第一把尺子：接受 vs 发现</h3></div>
+  <div class="vs">
+    <div class="mini"><h4>接受学习</h4><p>内容<b>以结论方式呈现</b>，老师讲、学生接。<br><b>效率高</b>（成体系、有组织、有目的），所以它是<b>学生学习的主要方式</b>。<br>缺点：<b>忽视学生主动性 / 主体性</b>。</p></div>
+    <div class="m">VS</div>
+    <div class="mini"><h4>发现学习</h4><p>内容<b>不直接呈现</b>，学生<b>独立思考、探索、发现</b>。<br><b>效率低</b>（慢），但能<b>发挥主动性、以学生为主体</b>。</p></div>
+  </div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>就问一句：<b>结论是别人端上桌的，还是你自己下厨做出来的？</b>端上桌 = 接受；自己做 = 发现。中间还有一种「<b>有指导的发现</b>」：导师指点着你写论文、老师指导着你做实验——像有人在旁边报菜谱、你自己动手。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">1.4 / 1.5 / 1.6</span>第二把尺子：机械 vs 有意义</h3>
+    <p class="one">旧知识 = 你<b>已有的经验</b>；新知识 = <b>接下来要学的材料</b>。能用旧的理解新的，就是<b>建立了联系</b>。</p></div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p><b>有意义 = 接上了，理解了。</b>像你学过三角形，现在学四边形，一看「四边形能拆成两个三角形」——这个「二倍关系」是知识<b>本来就有的</b>联系，你用旧的懂了新的。</p>
+    <p><b>机械 = 没接上，不理解。</b>脑子里有旧经验，但看新材料就是看不懂，只能硬背。</p>
+    <p>小孩先背「苹果香蕉梨」、先背单词，后来才慢慢懂——所以是<b>先机械，后有意义</b>。</p>
+  </div>
+  <div class="blk trap"><span class="lab">最大的坑：人为编的联系不算</span>
+    <p>有意义学习要求联系是<b>「非人为、实质性」</b>的——<b>知识本身就有</b>的联系。你为了背圆周率编「山巅一寺一壶酒」（3.14159），这个联系是<b>你硬编的</b>，数字本身没这意思。所以<mark>编口诀、谐音记单词、打油诗背圆周率，考试一律不算有意义学习，归到机械</mark>。老师原话：「它可以是意义识记，但不是有意义学习。」</p>
+    <p class="small">⚠ 别把「意义识记」（记忆那一章的词，允许人为赋予）和「有意义学习」（奥苏贝尔的词，必须非人为）混起来。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">1.7 ~ 1.10</span>四句必背结论</h3></div>
+  <div class="blk term"><span class="lab">考试写这些词</span>
+    <ol>
+      <li>两个维度<b>互不依赖、彼此独立</b>：接受可以机械也可以有意义，发现也一样，<b>可以交叉</b>。</li>
+      <li>四种学习<b>无高低之分</b>（发现学习不比接受学习高级）。</li>
+      <li>奥苏贝尔提倡 <b>有意义的接受学习</b>。（对比：后面会学<b>布鲁纳</b>，他强调<b>发现学习</b>——每个学者提倡的不一样。）</li>
+      <li>顺序：<b>先机械、后有意义</b>。</li>
+    </ol>
+  </div>
+  <div class="blk hook"><span class="lab">记忆钩子</span>
+    <p>「<b>谁给的？懂了没？</b>」——六个字，两把尺子。再加一句「<b>奥苏爱接受，布鲁纳爱发现</b>」。</p>
+  </div>
+
+  <div class="blk exam"><span class="lab">考场上怎么选</span>
+    <p><b>判断题</b>考定义：「接受学习即机械学习，发现学习即意义学习」→ <b>错</b>（互不依赖）。</p>
+    <p><b>例子题</b>（为主）两步走：<b>第一步看「谁给的」→ 接受/发现；第二步看「懂不懂」→ 机械/有意义。</b>题干问「有意义的接受」就要<b>两个条件同时满足</b>。</p>
+  </div>
+
+  <div class="quiz" data-a="1"><div class="src">真题 · 2023 四川上 · 判断</div>
+    <div class="q">小明听生物老师的讲解，理解了生态系统的食物链和食物网两个概念之间的关系。小明的学习属于发现学习。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step"><b>第一步</b>「听老师讲解」→ 别人给的 → <b>接受</b>，所以「发现」直接判错。</span><span class="step"><b>第二步</b>「理解了」→ 有意义。完整说法：有意义的接受学习。</span><span class="step"><b>答案 B</b></span></div>
+    <div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">真题 · 单选</div>
+    <div class="q">幼儿能将乘法口诀背得滚瓜烂熟，但可能不知道二八十六和八二十六之间的关系。这种学习属于（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>有意义的发现学习</button><button class="opt"><i>B</i>机械的发现学习</button><button class="opt"><i>C</i>机械的接受学习</button><button class="opt"><i>D</i>有意义的接受学习</button></div>
+    <div class="why"><span class="step"><b>第一步</b>乘法口诀是外面给的 → 接受。</span><span class="step"><b>第二步</b>不知道关系 → 不理解 → 机械。</span><span class="step"><b>答案 C</b>：死记硬背就是机械的接受。</span></div>
+    <div class="verdict"></div></div>
+
+  <div class="quiz" data-a="3"><div class="src">真题 · 2020 四川下 · 单选（老师说 C 是唯一迷惑项）</div>
+    <div class="q">下列哪种学习属于有意义的接受学习？</div>
+    <div class="opts"><button class="opt"><i>A</i>科学家探索新材料</button><button class="opt"><i>B</i>儿童尝试错误走迷宫</button><button class="opt"><i>C</i>小学生编打油诗背诵圆周率</button><button class="opt"><i>D</i>中学生听讲座，理解概念之间的关系</button></div>
+    <div class="why"><span class="step"><b>A</b> 科学家自己探索 → 发现（还是独立发现），排除。</span><span class="step"><b>B</b> 迷宫不是别人给的 → 发现，排除。</span><span class="step"><b>C</b> 圆周率是别人给的 → 接受 ✓；但打油诗是<b>人为赋予</b>的联系 → 不算有意义 → 排除。这是陷阱。</span><span class="step"><b>D</b> 听讲座 → 接受；理解关系 → 有意义。<b>答案 D</b>。</span></div>
+    <div class="verdict"></div></div>
+
+  <div class="blk review"><span class="lab">自己考自己（先说出来，再点开）</span>
+    <details class="rc"><summary>奥苏贝尔的两把尺子分别问什么？各自分出哪两类？</summary><div class="ans">① 学习方式（谁给的）：接受 / 发现；② 新旧知识关系（懂了没）：机械 / 有意义。</div></details>
+    <details class="rc"><summary>「用谐音记单词」为什么不算有意义学习？考试归哪类？</summary><div class="ans">因为联系是人为赋予的，不是非人为、实质性的。归机械学习。</div></details>
+    <details class="rc"><summary>接受学习和发现学习哪个高级？奥苏贝尔提倡哪种？</summary><div class="ans">无高低之分。奥苏贝尔提倡有意义的接受学习（布鲁纳才强调发现学习）。</div></details>
+    <details class="rc"><summary>接受学习效率高还是低？缺点是什么？</summary><div class="ans">效率高（是学生学习的主要方式），缺点是忽视学生的主动性/主体性。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(1)">这站我通了 ✓</button><span class="msg">两把尺子拿稳了！</span></div>
+</section>
+<!-- ============ 站 2 ============ -->
+<section class="card station" id="s2" data-s="2" style="--c1:#00a8b5;--c2:#1fa971">
+  <div class="st-head"><div class="st-num">第<br>2 站</div><div><h2>加涅：一张榜单 + 一座梯子<span class="tag warn">老师说最有挑战</span></h2><p class="st-sub">对应视频 12:25 ~ 16:50 · 幻灯片 S005 ~ S009</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事</span>
+    <p>加涅是个爱分类的收藏家，他给「学习」做了<b>两份清单</b>，但两份清单的性质完全不同：</p>
+    <p>第一份是<b>「战利品榜单」</b>——学完之后你手里拿到了什么？他数出 5 样：一张会说话的嘴（言语信息）、一颗会算的脑（智慧技能）、一套管自己的方法（认知策略）、一颗有态度的心（态度）、一双会动的手（动作技能）。<b>榜单上的 5 样东西是并列的，没有谁比谁高。</b></p>
+    <p>第二份是<b>「爬梯子」</b>——学习有难有易，他画了 8 级台阶，<b>必须从低到高</b>：从最简单的「听到信号就有反应」，一直爬到最难的「解决复杂问题」。</p>
+    <p>考试就爱考：<b>榜单不分高低，梯子有顺序。</b></p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">2.1</span>榜单：学习结果分类（5 类，无高低）</h3></div>
+  <div class="blk hook"><span class="lab">口诀：颜值太动人</span>
+    <p><b>颜</b>（言语信息）<b>值</b>（智慧技能）<b>太</b>（态度）<b>动</b>（动作技能）<b>人</b>（认知策略——「人」取「认」的音）</p>
+  </div>
+  <div class="tbl-wrap"><table>
+    <tr><th>类别</th><th>说人话</th><th>题目里长这样</th></tr>
+    <tr><td>言语信息</td><td>能<b>说出来</b>的事实、知识</td><td>背出一首古诗、说出一个定义</td></tr>
+    <tr><td>智慧技能</td><td>用概念、规则去<b>办事、解题</b>（辨别/概念/规则/问题解决都归它）</td><td>用公式解题、把马和狗分类</td></tr>
+    <tr><td>认知策略</td><td><b>管自己怎么学</b>的方法和技巧</td><td>「运用归类法记忆其他单词」——重点在<b>方法、调控</b></td></tr>
+    <tr><td>态度</td><td>情感倾向，喜欢/敬佩/热爱</td><td>参观博物馆后产生热爱之情；看电影产生敬佩之情</td></tr>
+    <tr><td>动作技能</td><td><b>骨骼肌肉</b>层面的动作</td><td>体操、广播体操</td></tr>
+  </table></div>
+
+  <div class="kp"><h3><span class="kid">2.2</span>梯子：学习水平分类（8 级，从低到高）</h3></div>
+  <div class="blk hook"><span class="lab">口诀：心机所言，别念这题</span>
+    <p><b>心</b>信号 → <b>机</b>刺激-反应 → <b>所</b>连锁 → <b>言</b>言语联想 → <b>别</b>辨别 → <b>念</b>概念 → <b>这</b>规则 → <b>题</b>问题解决（高级规则）</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 300" role="img" aria-label="加涅学习水平八级梯子">
+      <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#00a8b5"/><stop offset="1" stop-color="#1fa971"/></linearGradient></defs>
+      <g font-size="12.5" fill="#1d1d1f" font-weight="700">
+        <rect x="20" y="250" width="80" height="32" rx="8" fill="url(#g2)"/><text x="60" y="271" text-anchor="middle" fill="#fff">1 信号</text>
+        <rect x="105" y="220" width="80" height="62" rx="8" fill="url(#g2)" opacity=".9"/><text x="145" y="245" text-anchor="middle" fill="#fff">2 刺激-反应</text>
+        <rect x="190" y="190" width="80" height="92" rx="8" fill="url(#g2)" opacity=".92"/><text x="230" y="215" text-anchor="middle" fill="#fff">3 连锁</text>
+        <rect x="275" y="160" width="80" height="122" rx="8" fill="url(#g2)" opacity=".94"/><text x="315" y="185" text-anchor="middle" fill="#fff">4 言语联想</text>
+        <rect x="360" y="130" width="80" height="152" rx="8" fill="url(#g2)" opacity=".96"/><text x="400" y="155" text-anchor="middle" fill="#fff">5 辨别</text>
+        <rect x="445" y="100" width="80" height="182" rx="8" fill="url(#g2)" opacity=".98"/><text x="485" y="125" text-anchor="middle" fill="#fff">6 概念</text>
+        <rect x="530" y="70" width="80" height="212" rx="8" fill="url(#g2)"/><text x="570" y="95" text-anchor="middle" fill="#fff">7 规则</text>
+        <rect x="615" y="40" width="85" height="242" rx="8" fill="url(#g2)"/><text x="657" y="65" text-anchor="middle" fill="#fff">8 问题解决</text>
+      </g>
+      <g font-size="11" fill="#48484a">
+        <text x="60" y="240" text-anchor="middle">S→R</text>
+        <text x="145" y="210" text-anchor="middle">R→S 一个动作</text>
+        <text x="230" y="180" text-anchor="middle">一串动作</text>
+        <text x="315" y="150" text-anchor="middle">词连成句</text>
+        <text x="400" y="120" text-anchor="middle">分得清</text>
+        <text x="485" y="90" text-anchor="middle">抓本质·能归类</text>
+        <text x="570" y="60" text-anchor="middle">用公式定理</text>
+        <text x="657" y="30" text-anchor="middle">多个规则组合</text>
+      </g>
+      <text x="20" y="22" font-size="13" font-weight="800" fill="#1d1d1f">从低到高 →（考顺序！）</text>
+      <line x1="20" y1="290" x2="700" y2="290" stroke="#e5e5ea"/>
+      <rect x="20" y="30" width="330" height="1" fill="none"/>
+      <text x="20" y="45" font-size="12" fill="#e5322d" font-weight="700">前 4 级：像行为主义的联结</text>
+      <text x="360" y="22" font-size="12" fill="#1fa971" font-weight="700" text-anchor="start"> </text>
+      <text x="20" y="62" font-size="12" fill="#1fa971" font-weight="700">5~8 级：都属于「智慧技能」</text>
+    </svg>
+    <figcaption>老师板书（S009）在信号旁写了 S→R，在刺激-反应旁写了 R→S。</figcaption>
+  </figure>
+
+  <div class="blk plain"><span class="lab">说人话：8 级台阶一个个讲</span>
+    <ol>
+      <li><b>信号学习</b>：<b>刺激在前，反应在后</b>。铃一响，狗流口水。（S→R）</li>
+      <li><b>刺激-反应学习</b>：<b>反应在前，刺激在后</b>，而且<b>只有一个动作</b>。你举手（一个动作），老师表扬你。（R→S）</li>
+      <li><b>连锁学习</b>：<b>一连串动作</b>。用钥匙开锁 = 掏钥匙 → 对准锁眼 → 扭——三个动作串起来。体操也是。</li>
+      <li><b>言语联想学习</b>：连成串的是<b>语言</b>，不是动作。词一、词二、词三连成一句话。</li>
+      <li><b>辨别学习</b>：<b>分得清</b>。区分形状大小，区分两个特别像的单词。</li>
+      <li><b>概念学习</b>：比辨别更进一步，抓住<b>共同本质特征</b>（所有的鸟都有什么特点），而且加涅认为学会的标准是<b>能运用概念去识别、归类</b>（哪个是马、哪个是狗）。</li>
+      <li><b>规则学习</b>：概念和概念的关系——公式、定理、原理，学会的标准是<b>能用公式解题、用原理指导行为</b>。</li>
+      <li><b>问题解决（高级规则）</b>：题目<b>复杂、要组合多个规则</b>才能解决，一个规则不够用。</li>
+    </ol>
+  </div>
+  <div class="blk trap"><span class="lab">坑 ① 「刺激-反应学习」和行为主义的 S-R 不是一回事</span>
+    <p>加涅的第 2 级「刺激-反应学习」强调<b>反应在前</b>；而行为主义说的「刺激-反应联结（S-R）」<b>没有箭头、不分先后</b>。老师反复说：「<b>分开记，不要联系。</b>」</p>
+  </div>
+  <div class="blk trap"><span class="lab">坑 ② 加涅只看「最终学习结果」</span>
+    <p>你学了「质量」这个词，能背出来 ≠ 学会了；能<b>用</b>这个概念才算。学古诗能背出来就算达到结果（那是言语信息）。题干出现「<b>下定义</b>」三个字 → 就是定义性概念，抓关键词做题。</p>
+  </div>
+
+  <div class="blk exam"><span class="lab">考场上怎么选</span>
+    <p>① 考<b>顺序</b>：学习水平 8 级从低到高排序 —— 背口诀。② 考<b>归类</b>：给情境判断属于 5 类结果的哪一类 / 8 级水平的哪一级。</p>
+  </div>
+
+  <div class="quiz" data-a="0"><div class="src">真题 · 2024 四川上 · 单选（讲义答案曾校对错，老师课上改为态度）</div>
+    <div class="q">通过参观红色文化博物馆，听讲解员讲中华文明的起源，小学生们产生了对祖国的热爱之情。根据加涅的分类，学生进行了（　）的学习。</div>
+    <div class="opts"><button class="opt"><i>A</i>态度</button><button class="opt"><i>B</i>智慧技能</button><button class="opt"><i>C</i>动作技能</button><button class="opt"><i>D</i>认知策略</button></div>
+    <div class="why"><span class="step"><b>看落脚点</b>：「产生热爱之情」——情感问题，没有任何「解决问题」的动作。</span><span class="step"><b>答案 A 态度</b>。老师提醒：别迷信答案，讲义里那版（看电影产生敬佩之情）也选态度（B）。</span></div>
+    <div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">真题 · 单选（很多同学错）</div>
+    <div class="q">教师向学生随机呈现一个词表并要求记住，学生学会了按蔬菜、肉类、水果等对单词进行归类组织，并运用该方法记忆其他单词。根据加涅的观点这属于（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>言语信息的学习</button><button class="opt"><i>B</i>智力技能的学习</button><button class="opt"><i>C</i>认知策略的学习</button><button class="opt"><i>D</i>语义信息的学习</button></div>
+    <div class="why"><span class="step"><b>大意漏神的地方</b>：前面看到「归类」就想到概念/智慧技能。</span><span class="step"><b>看后半句</b>：「运用该方法记忆其他单词」——这是<b>记忆方法、技巧、调控</b> → 认知策略。</span><span class="step"><b>答案 C</b>。</span></div>
+    <div class="verdict"></div></div>
+
+  <div class="quiz" data-a="1"><div class="src">真题 · 单选</div>
+    <div class="q">学生学习体操动作，这种学习属于（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>信号学习</button><button class="opt"><i>B</i>连锁学习</button><button class="opt"><i>C</i>辨别学习</button><button class="opt"><i>D</i>言语联想学习</button></div>
+    <div class="why"><span class="step">体操不可能只有一个动作，一定是<b>多个动作连成串</b> → 连锁。</span><span class="step">排除：信号是刺激在前；辨别是区分；言语联想是语言层面；体操是骨骼肌肉层面。若有「刺激-反应」选项也不选（它只有一个动作）。</span><span class="step"><b>答案 B</b>。</span></div>
+    <div class="verdict"></div></div>
+
+  <div class="blk review"><span class="lab">自己考自己</span>
+    <details class="rc"><summary>加涅两种分类，哪个有高低顺序，哪个没有？</summary><div class="ans">学习结果 5 类无高低；学习水平 8 级从低到高。</div></details>
+    <details class="rc"><summary>用钥匙开锁、举手被表扬、听铃流口水，各属于哪一级？</summary><div class="ans">连锁学习（一串动作）；刺激-反应学习（一个动作，反应在前）；信号学习（刺激在前）。</div></details>
+    <details class="rc"><summary>概念学习学会的标准是什么？</summary><div class="ans">不只知道本质特征，还要能运用概念去识别、归类。</div></details>
+    <details class="rc"><summary>背口诀：颜值太动人 / 心机所言别念这题，分别对应什么？</summary><div class="ans">言语信息、智慧技能、态度、动作技能、认知策略 / 信号、刺激-反应、连锁、言语联想、辨别、概念、规则、问题解决。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(2)">这站我通了 ✓</button><span class="msg">最难的一站过了！</span></div>
+</section>
+<!-- ============ 站 3 ============ -->
+<section class="card station" id="s3" data-s="3" style="--c1:#1fa971;--c2:#00a8b5">
+  <div class="st-head"><div class="st-num">第<br>3 站</div><div><h2>另外三种分法 + 实战演练<span class="tag">识记</span></h2><p class="st-sub">对应视频 16:31 ~ 33:20 · 幻灯片 S005 ~ S014</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事</span>
+    <p>博物馆一楼还剩两位小馆长。<b>阿瑟雷伯</b>只关心一件事：你学的时候<b>脑子亮着灯没</b>？灯亮着、你知道自己正在记——叫<b>外显学习</b>；灯没亮、不知不觉就会了（比如听歌听多了自然会唱）——叫<b>内隐学习</b>。</p>
+    <p>然后是<b>我国学者</b>（冯忠良、潘菽），他们按「学什么内容」分，都有「知识」和「技能」两样，区别只在多加了什么。老师说这块<b>四川还没考过</b>，多选题看到谁就匹配谁，有个印象即可。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">3.1</span>阿瑟雷伯：按意识水平</h3></div>
+  <div class="vs">
+    <div class="mini"><h4>内隐学习</h4><p><b>无意识、不知不觉</b>。没特意记，也不知道自己在记，后来发现记住了。</p></div>
+    <div class="m">VS</div>
+    <div class="mini"><h4>外显学习</h4><p><b>有意识</b>。像你现在听课记知识点，知道大脑在想啥，付出了努力。</p></div>
+  </div>
+  <div class="blk hook"><span class="lab">钩子</span><p>题干出现「<b>不知不觉</b>」四个字 → 内隐。</p></div>
+
+  <div class="kp"><h3><span class="kid">3.2 / 3.3</span>我国学者：按学习内容</h3></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>学者</th><th>分类</th><th>怎么记</th></tr>
+    <tr><td>冯忠良</td><td>知识的学习、技能的学习、<b>社会/行为规范</b>的学习</td><td>除了知识技能，还要学「社会要我怎么做」</td></tr>
+    <tr><td>潘菽 · 版一</td><td>知识、技能、<b>道德品质和行为习惯</b>的学习</td><td>跟冯差不多，但道德品质要求更高一点</td></tr>
+    <tr><td>潘菽 · 版二</td><td>知识、<b>动作技能</b>、<b>智慧技能</b>、社会行为规范的学习</td><td>把技能拆成动作（骨骼肌肉）和智慧（大脑思考）</td></tr>
+  </table></div>
+
+  <div class="kp"><h3><span class="kid">3.5</span>四位馆长的「划分依据」汇总（S005 那张表）</h3></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>人物</th><th>划分依据</th><th>内容</th></tr>
+    <tr><td>加涅</td><td>学习结果 / 学习水平</td><td>5 类 / 8 级</td></tr>
+    <tr><td>阿瑟雷伯</td><td>学习意识水平</td><td>内隐、外显</td></tr>
+    <tr><td>奥苏贝尔</td><td>学习进行的方式 / 学习材料与学习者原有知识的关系</td><td>接受、发现 / 机械、有意义</td></tr>
+    <tr><td>冯忠良、潘菽</td><td>学习内容</td><td>知识、技能、（社会）行为规范 …</td></tr>
+  </table></div>
+
+  <div class="blk teacher"><span class="lab">老师的学习观（32:35 ~ 33:20）</span>
+    <p class="quote">最重要的就是基础的，拿下基础就得到了天下。偏难怪都是少数。特别难的例子，特例特记，不代表你没学明白。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">1.13 ~ 3.6</span>实战演练（讲义 P68-69，老师课上全部讲了）</h3></div>
+
+  <div class="quiz" data-a="1"><div class="src">判断 2</div>
+    <div class="q">学习是可以用经验或练习来解释的、可观察的行为变化。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step">学习包括「行为潜能」——态度、认知、情感的变化可能观察不到。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">判断 3</div>
+    <div class="q">按照奥苏贝尔的观点，幼儿能够背诵很多唐诗，但并不理解其中的意义，这种学习属于机械学习。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step">唐诗别人给的 → 接受；不理解 → 机械。题目只问「机械」没问接受/发现，没毛病。<b>答案 A</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="1"><div class="src">判断 4</div>
+    <div class="q">心理学家华生根据学生学习内容的不同，把学习分为接受学习和发现学习。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step">接受/发现是<b>奥苏贝尔</b>分的，依据是<b>学习方式</b>。华生是行为主义创始人（做小阿尔伯特实验的那个）。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="3"><div class="src">单选 1</div>
+    <div class="q">下列属于学习现象的是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>膝跳反射</button><button class="opt"><i>B</i>疲劳后动作变形</button><button class="opt"><i>C</i>暗适应</button><button class="opt"><i>D</i>背诵唐诗</button></div>
+    <div class="why"><span class="step">A 本能，B、C 生理现象。<b>答案 D</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">单选 6</div>
+    <div class="q">王琳不知不觉就会唱许多流行歌曲。她的这种学习属于（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>发现学习</button><button class="opt"><i>B</i>替代学习</button><button class="opt"><i>C</i>内隐学习</button><button class="opt"><i>D</i>外显学习</button></div>
+    <div class="why"><span class="step">关键词「不知不觉」→ 无意识 → <b>内隐学习，答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">单选 7（教材原理改编）</div>
+    <div class="q">下列情境中，属于奥苏贝尔理论中有意义学习的是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>丹丹死记硬背九九乘法表</button><button class="opt"><i>B</i>儿童尝试错误走迷宫</button><button class="opt"><i>C</i>小素通过听讲进一步理解概念间的关系</button><button class="opt"><i>D</i>小华通过自编的谐音记忆法来记忆单词</button></div>
+    <div class="why"><span class="step">A 接受+死记硬背 → 机械接受。B 迷宫是独立发现，但理解不了 → 机械。</span><span class="step">C 听讲 → 接受；进一步理解 → 有意义 ✓</span><span class="step">D 单词别人给的 → 接受；谐音是<b>人为赋予</b>的联系 → 不算有意义，归机械。</span><span class="step"><b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">单选 8</div>
+    <div class="q">关于接受学习和发现学习的表述，说法正确的是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>接受学习可以是机械的，也可以是有意义的</button><button class="opt"><i>B</i>接受学习是机械的，发现学习是有意义的</button><button class="opt"><i>C</i>接受学习是低级的，发现学习是高级的</button><button class="opt"><i>D</i>接受学习是高级的，发现学习是低级的</button></div>
+    <div class="why"><span class="step">两个维度彼此独立 → A 对、B 错；无高低之分 → C、D 错。<b>答案 A</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="blk review"><span class="lab">自己考自己</span>
+    <details class="rc"><summary>阿瑟雷伯按什么分？「不知不觉学会」叫什么？</summary><div class="ans">按意识水平；内隐学习。</div></details>
+    <details class="rc"><summary>冯忠良比「知识、技能」多加了什么？</summary><div class="ans">社会 / 行为规范的学习。</div></details>
+    <details class="rc"><summary>接受学习 / 发现学习是谁分的？依据是什么？</summary><div class="ans">奥苏贝尔；学习进行的方式（不是学习内容，也不是华生）。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(3)">这站我通了 ✓</button><span class="msg">一楼逛完，上二楼！</span></div>
+</section>
+
+<!-- ============ 站 4 ============ -->
+<section class="card station" id="s4" data-s="4" style="--c1:#a550d8;--c2:#5e5ce6">
+  <div class="st-head"><div class="st-num">第<br>4 站</div><div><h2>四大流派：先认人，再谈理论<span class="tag">总览</span></h2><p class="st-sub">对应视频 33:40 ~ 38:46 · 幻灯片 S015 ~ S017</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事</span>
+    <p>二楼四个展厅住着四拨心理学家，他们对「人是怎么学会东西的」吵了一百年：</p>
+    <p>🥊 <b>行为主义</b>是个<b>驯兽师</b>：「我不管你脑子里想啥，我只看你<b>外在行为</b>变没变。我给刺激、你给反应，训练你、塑造你，简单粗暴。」</p>
+    <p>💻 <b>认知主义</b>是个<b>电脑工程师</b>：「学习就是大脑<b>加工信息</b>——怎么输入、怎么处理、怎么储存。」所以它又叫<b>信息加工心理学</b>。它认为知识是客观的，谁学都一样，你把外面的知识<b>单向吸收、内化</b>就行。</p>
+    <p>🧱 <b>建构主义</b>是认知主义的<b>儿子</b>，但跟爹吵翻了：「知识哪有什么标准答案！每个人看到的都不一样，情境不同也不一样。我影响知识，知识也影响我——是<b>双向</b>的、<b>个体和环境相互作用</b>的。」</p>
+    <p>🌱 <b>人本主义</b>最晚出现，觉得自己最高级：「你们光盯着大脑和行为，太冷了！要看<b>全人</b>——既看认知也看<b>情感</b>，人性本善，老师给他好的关系、好的环境，他自己就能学好。」</p>
+  </div>
+
+  <div class="blk teacher"><span class="lab">老师的区分心法</span>
+    <p class="quote">别从共同点上找区别！他俩都说的那句话，有什么好区分的？要区分，就看不同点。认知和建构都关注建构知识体系——这是共同点；不同点是：认知认为知识<b>客观</b>、谁学都一样；建构认为知识<b>主观</b>、双向。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">4.6 / 4.7</span>先把人名和流派配好对</h3></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>流派</th><th>口诀</th><th>代表人物</th></tr>
+    <tr><td>行为主义</td><td><b>桑巴死板</b>（行为死板）</td><td>桑代克、巴甫洛夫、斯金纳、班杜拉</td></tr>
+    <tr><td>认知主义</td><td><b>苛曼不输加涅</b></td><td>苛勒、托尔曼、布鲁纳、奥苏贝尔、加涅</td></tr>
+    <tr><td>建构主义</td><td><b>健脾胃度</b></td><td>皮亚杰、维果斯基、杜威（杜威是理论渊源人物）</td></tr>
+    <tr><td>人本主义</td><td><b>罗马人</b></td><td>罗杰斯、马斯洛</td></tr>
+  </table></div>
+  <div class="blk hook"><span class="lab">行为主义四个人，各养一只动物</span>
+    <div class="pill-row"><span class="pill b">🐱 桑代克的猫</span><span class="pill b">🐶 巴甫洛夫的狗</span><span class="pill">🐭 斯金纳的小白鼠（明天讲）</span><span class="pill">👶 班杜拉的宝宝（明天讲）</span></div>
+    <p class="small">记住实验动物，人名和理论就不会串。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">4.8</span>本章思维导图（S015）</h3></div>
+  <figure>
+    <svg viewBox="0 0 720 262" role="img" aria-label="本章思维导图">
+      <g font-size="13" font-weight="700">
+        <rect x="20" y="100" width="110" height="60" rx="14" fill="#5e5ce6"/><text x="75" y="126" text-anchor="middle" fill="#fff">学习与</text><text x="75" y="145" text-anchor="middle" fill="#fff">学习理论</text>
+        <line x1="130" y1="130" x2="180" y2="40" stroke="#c7c7cc" stroke-width="2"/><line x1="130" y1="130" x2="180" y2="130" stroke="#c7c7cc" stroke-width="2"/><line x1="130" y1="130" x2="180" y2="220" stroke="#c7c7cc" stroke-width="2"/>
+        <rect x="180" y="20" width="120" height="40" rx="12" fill="rgba(94,92,230,.14)"/><text x="240" y="45" text-anchor="middle" fill="#1d1d1f">学习概述</text>
+        <rect x="180" y="110" width="120" height="40" rx="12" fill="rgba(94,92,230,.14)"/><text x="240" y="135" text-anchor="middle" fill="#1d1d1f">学习分类</text>
+        <rect x="180" y="200" width="120" height="40" rx="12" fill="rgba(94,92,230,.14)"/><text x="240" y="225" text-anchor="middle" fill="#1d1d1f">学习理论</text>
+      </g>
+      <g font-size="12" fill="#48484a">
+        <text x="315" y="34">学习实质 · 人类与动物学习的区别 · 学生学习的特点</text>
+        <text x="315" y="124">学习结果 · 学习水平 · 学习意识水平 · 学习性质与形式</text>
+        <text x="315" y="214" fill="#e5322d" font-weight="700">行为主义：桑代克、巴甫洛夫 ｜ 斯金纳、班杜拉（下讲）</text>
+        <text x="315" y="234">认知（苛勒、托尔曼、布鲁纳、奥苏贝尔、加涅）</text><text x="315" y="252">建构（知识观/学生观/学习观/教学观）· 人本（马斯洛、罗杰斯）</text>
+      </g>
+      <text x="315" y="54" font-size="11" fill="#86868b">↑ 上一讲讲过</text>
+      <text x="315" y="144" font-size="11" fill="#86868b">↑ 第 1~3 站</text>
+      <text x="560" y="214" font-size="11" fill="#86868b">← 本讲只到巴甫洛夫</text>
+    </svg>
+    <figcaption>这一讲在整章里的位置：一楼「分类」讲完，二楼「理论」只讲了行为主义前半。</figcaption>
+  </figure>
+
+  <div class="blk review"><span class="lab">自己考自己</span>
+    <details class="rc"><summary>一句话说出四大流派各自看什么？</summary><div class="ans">行为看外在行为；认知看大脑加工信息；建构看个体与环境双向作用、知识主观；人本看全人（认知+情感）、人性本善。</div></details>
+    <details class="rc"><summary>认知主义和建构主义最大的不同点？</summary><div class="ans">认知认为知识客观、单向吸收；建构认为知识主观、每人不同、双向影响。</div></details>
+    <details class="rc"><summary>「苛曼不输加涅」是哪个流派？「健脾胃度」呢？</summary><div class="ans">认知主义（苛勒、托尔曼、布鲁纳、奥苏贝尔、加涅）；建构主义（皮亚杰、维果斯基、杜威）。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(4)">这站我通了 ✓</button><span class="msg">人认全了，进入重头戏！</span></div>
+</section>
+<!-- ============ 站 5 ============ -->
+<section class="card station" id="s5" data-s="5" style="--c1:#f0730a;--c2:#e0367a">
+  <div class="st-head"><div class="st-num">第<br>5 站</div><div><h2>行为主义概述：驯兽师华生<span class="tag hot">考频 76 次</span></h2><p class="st-sub">对应视频 38:46 ~ 45:20 · 幻灯片 S017</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事：小阿尔伯特</span>
+    <p>一百年前，有个叫<b>阿尔伯特</b>的小宝宝，特别喜欢毛茸茸的小白鼠，抱着玩得很开心。心理学家<b>华生</b>和助手躲在旁边，每当宝宝一摸小白鼠，就<b>「咣」地敲一下大锣</b>，把他吓得哇哇哭。一次、两次、三次……后来宝宝一看到小白鼠就害怕；再后来，<b>所有带白毛的东西</b>——兔子、皮大衣、圣诞老人的胡子——他都怕。恐惧像水一样<b>泛开</b>了，所以这个实验叫<b>恐惧泛化实验</b>。</p>
+    <p>这个实验伤害很大，小阿尔伯特很早就去世了，父母也不再信任华生，所以没做后续的「消退」实验。它<b>有违伦理</b>，后来的心理学家基本改用<b>动物</b>做实验——这就是为什么下面两站主角是猫和狗。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">5.1 ~ 5.5</span>行为主义的身份证</h3></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>项目</th><th>内容</th><th>说人话</th></tr>
+    <tr><td>创始人</td><td><b>华生</b></td><td>敲锣吓宝宝的那个</td></tr>
+    <tr><td>别称</td><td><b>联结主义</b></td><td>因为它关注「刺激和反应怎么连起来」</td></tr>
+    <tr><td>联结主义创始人</td><td><b>桑代克</b>（不是华生！）</td><td>两个「创始人」是两个人，考试区分度不大但要记对</td></tr>
+    <tr><td>研究对象</td><td><b>外显行为</b></td><td>看得见的行为</td></tr>
+    <tr><td>研究方法</td><td><b>实验法</b></td><td>给刺激、看反应</td></tr>
+    <tr><td>核心思想</td><td><b>刺激—反应的联结（S-R）</b></td><td>注意：<b>没有箭头</b>，不分谁先谁后</td></tr>
+    <tr><td>地位</td><td><b>第一次革命；第一势力</b></td><td>「双料第一」</td></tr>
+  </table></div>
+
+  <div class="blk plain"><span class="lab">说人话：为什么是「双料第一」？</span>
+    <p>心理学刚诞生时研究的是<b>「意识」</b>——你脑子里怎么想的，看不见摸不着，很难验证。行为主义跳出来说：「你们研究的那玩意儿啥也不是！我用<b>实验</b>看得见、测得准，我科学！」——这相当于<b>推翻</b>了前人，所以叫<b>第一次革命</b>；因为它科学、能验证，信的人特别多、队伍特别大，所以叫<b>第一势力</b>。</p>
+  </div>
+  <div class="blk trap"><span class="lab">坑：S-R 没箭头</span>
+    <p>「刺激—反应的联结」不等于「刺激在前」。它可能刺激在前反应在后（巴甫洛夫），也可能反应在前刺激在后（桑代克）。<b>别被加涅第 2 级的名字带偏</b>，两边分开记。实验里既可以控制刺激（给小白鼠），也可以控制行为（举手就表扬），重点看它们之间<b>怎么建立联系</b>。</p>
+  </div>
+  <div class="blk hook"><span class="lab">钩子</span>
+    <p><b>华生创行为，桑代克创联结；只看外在，实验说话；S-R 不带箭头；双料第一。</b></p>
+  </div>
+
+  <div class="blk review"><span class="lab">自己考自己（老师 44:36 的快速回顾）</span>
+    <details class="rc"><summary>行为主义又叫什么主义？两个「创始人」分别是谁？</summary><div class="ans">联结主义。行为主义创始人华生；联结主义创始人桑代克。</div></details>
+    <details class="rc"><summary>用什么方法研究什么？</summary><div class="ans">用实验法研究外显行为。</div></details>
+    <details class="rc"><summary>它之前的人研究什么？它的地位是什么？</summary><div class="ans">之前研究意识；它是第一次革命、第一势力。</div></details>
+    <details class="rc"><summary>小阿尔伯特实验又叫什么？说明了什么问题？</summary><div class="ans">恐惧泛化实验；有违伦理，此后多用动物做实验。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(5)">这站我通了 ✓</button><span class="msg">该看猫了！</span></div>
+</section>
+
+<!-- ============ 站 6 ============ -->
+<section class="card station" id="s6" data-s="6" style="--c1:#f0730a;--c2:#f5b400">
+  <div class="st-head"><div class="st-num">第<br>6 站</div><div><h2>桑代克：一只饿猫和三条律<span class="tag hot">考 5 次 · 例子题偏爱效果律</span></h2><p class="st-sub">对应视频 45:21 ~ 82:24 · 幻灯片 S018 ~ S043</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事：桑代克其人</span>
+    <p>老师说桑代克是「<b>人丑多读书</b>」的代表：长得不帅，追姑娘老追不上，在爱情上吃了苦，索性一头扎进研究。当时用人做实验有伦理问题，他被逼没招，就<b>用动物</b>——于是成了<b>动物心理学的开创者</b>，还建了<b>美国动物心理学实验室</b>（创始人<b>之一</b>，因为建实验室不可能一个人）。</p>
+    <p>他 <b>1903</b> 年写了《<b>教育心理学</b>》，<b>1913~1914</b> 年扩成<b>三卷本</b>：《人的本性》《学习心理》《个别差异及其起因》。这是<b>世界公认最早、比较科学又系统的教心专著</b>，也是<b>西方第一本</b>，标志着教育心理学从儿童心理学、普通心理学、教育学里<b>独立</b>出来。所以他是<b>教育心理学之父 / 科学教心鼻祖 / 美国教心奠基人</b>。</p>
+  </div>
+  <div class="blk hook"><span class="lab">两个口诀</span>
+    <p><b>桑老三创教心，一生一世，本心差</b> —— 1903 创《教育心理学》；1913-1914 三卷本；人的本<b>性</b>、学习<b>心</b>理、个别<b>差</b>异。</p>
+    <p><b>教心奠基创始父，动物呀！</b> —— 教心之父/奠基人；联结主义创始人；动物心理学开创者 + 动物心理学实验室创始人之一。</p>
+    <p class="small">顺带回顾：<b>记忆痕迹衰退说</b>（遗忘理论，也叫自动消退说）的代表人物：桑代克、巴甫洛夫、亚里士多德。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">6.4 / 6.5</span>实验：猫开笼取食（饿猫 / 迷笼 / 迷箱实验）</h3></div>
+  <div class="blk story"><span class="lab">故事继续</span>
+    <p>一只<b>饿</b>猫（必须饿！不饿它就在笼子里睡大觉，没有「想吃」的<b>动机</b>）被关进笼子，笼子外面放着鱼。它想出去，于是<b>瞎折腾</b>：啃笼子、抓栏杆、到处挠。偶然一次，<b>不小心碰到杠杆</b>，门开了，吃到鱼。再关进去，它还是瞎折腾，但<b>错误越来越少</b>；反复多次后，一进笼子就按杠杆。</p>
+    <p>老师说迷箱和迷笼只是翻译不同（说「迷箱」时多指后面的斯金纳，但桑代克这个也可以叫迷箱）。</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 230" role="img" aria-label="桑代克学习曲线">
+      <line x1="70" y1="190" x2="690" y2="190" stroke="#8e8e93" stroke-width="1.5"/><line x1="70" y1="190" x2="70" y2="20" stroke="#8e8e93" stroke-width="1.5"/>
+      <text x="380" y="220" text-anchor="middle" font-size="13" fill="#48484a">横轴：尝试次数（0 → 24）</text>
+      <text x="22" y="105" text-anchor="middle" font-size="13" fill="#48484a" transform="rotate(-90 22 105)">纵轴：逃出笼子所需时间</text>
+      <path d="M90 40 C 180 60, 230 120, 320 150 S 520 178, 680 182" fill="none" stroke="#f0730a" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="90" cy="40" r="6" fill="#f0730a"/><text x="100" y="36" font-size="12" fill="#1d1d1f" font-weight="700">160 秒</text>
+      <circle cx="320" cy="150" r="6" fill="#f0730a"/><text x="330" y="146" font-size="12" fill="#1d1d1f" font-weight="700">40 秒</text>
+      <circle cx="680" cy="182" r="6" fill="#f0730a"/><text x="640" y="172" font-size="12" fill="#1d1d1f" font-weight="700">20 秒</text>
+      <text x="380" y="70" text-anchor="middle" font-size="13" fill="#e5322d" font-weight="800">尝试越多 → 错误越少 → 用时越短</text>
+    </svg>
+    <figcaption>老师讲的学习曲线（S020）：随着尝试次数增加，做出动作所用的时间逐渐减少。</figcaption>
+  </figure>
+  <div class="blk trap"><span class="lab">坑：桑代克的实验是「反应在前、刺激在后」</span>
+    <p>猫<b>先</b>主动按杠杆（反应），<b>再</b>得到食物（刺激）。虽然桑代克说的是「刺激-反应的联结」（没箭头），但从实验看，是 <b>R → S</b>。这一点第 9 站「溯源拔高」要用。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">6.6 / 6.7</span>核心观点：学习是什么、怎么建立</h3></div>
+  <div class="blk term"><span class="lab">考试写这些词</span>
+    <ul>
+      <li><b>学习的实质：形成联结</b>——刺激与反应的联结（学习即联结）。</li>
+      <li><b>联结的建立：通过试误</b>——「盲目尝试 → 逐步减少错误 → 再尝试」反复作用。所以叫<b>试误说</b>。</li>
+      <li>试误过程受<b>三条学习公律</b>支配：准备律、练习律、效果律。</li>
+    </ul>
+  </div>
+  <div class="blk plain"><span class="lab">说人话</span><p>学会 = 「按杠杆」和「有鱼吃」在脑子里<b>连上了线</b>。这根线是<b>瞎试、试错、少错</b>一点点搓出来的。</p></div>
+
+  <div class="kp"><h3><span class="kid">6.9 ~ 6.12</span>三条学习公律（重点展开）</h3></div>
+  <figure>
+    <svg viewBox="0 0 720 200" role="img" aria-label="三条学习公律关系">
+      <rect x="230" y="20" width="260" height="70" rx="18" fill="#f0730a"/><text x="360" y="50" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">效果律（主律 · 最重要）</text><text x="360" y="74" text-anchor="middle" font-size="12.5" fill="#fff">反馈：满意 ↑ 行为 ／ 烦恼 ↓ 行为</text>
+      <line x1="300" y1="90" x2="170" y2="130" stroke="#c7c7cc" stroke-width="2"/><line x1="420" y1="90" x2="550" y2="130" stroke="#c7c7cc" stroke-width="2"/>
+      <rect x="50" y="130" width="240" height="56" rx="16" fill="rgba(240,115,10,.14)"/><text x="170" y="154" text-anchor="middle" font-size="14" font-weight="800" fill="#1d1d1f">准备律（附律 / 从属律）</text><text x="170" y="174" text-anchor="middle" font-size="12" fill="#48484a">预备定势 → 动机范畴</text>
+      <rect x="430" y="130" width="240" height="56" rx="16" fill="rgba(240,115,10,.14)"/><text x="550" y="154" text-anchor="middle" font-size="14" font-weight="800" fill="#1d1d1f">练习律（附律 / 从属律）</text><text x="550" y="174" text-anchor="middle" font-size="12" fill="#48484a">应用律 ↑ ／ 失用律 ↓</text>
+    </svg>
+    <figcaption>效果律是主律；准备律、练习律是它的附律/从属律——没有反馈，光准备、光练意义不大。</figcaption>
+  </figure>
+
+  <div class="kp"><h3 style="font-size:18px"><span class="kid">6.9</span>① 准备律：先有「想学」</h3></div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>进入学习之前，学习者做好的<b>预备性反应 / 预备定势</b>——可以是<b>生理</b>的（猫饿了才想觅食），也可以是<b>心理</b>的（老师提前告诉你今天讲到哪，你心里有准备、想听懂好上岸）。不管哪种，落脚点都是<b>「想学」这个动机</b>——所以准备律<mark>属于动机范畴</mark>。</p>
+    <p>有准备 + 让他学 → 满意；有准备 + 不让他学 → 烦恼；没准备 + 硬让他学 → 也烦恼。<b>启示：不能搞突袭</b>，上课前吃好饭、上好厕所、做好预习。</p>
+  </div>
+  <div class="blk trap"><span class="lab">最容易错的细节：两个角度分开看</span>
+    <p>教材原句：「桑代克讲的准备<b>不是</b>学习前的<b>知识准备或成熟</b>方面的准备，而是学习者在学习开始时的<b>预备定势</b>，属于<b>动机范畴</b>。」</p>
+    <p><b>定义角度</b>（判断题问「准备律 = 知识准备/成熟」）→ <b>不等同</b>，判错。<br>
+    <b>例子角度</b>（题干说预习、复习旧知、查资料、预设问题）→ 这些都能<b>激发学习动机</b>，所以<b>都算准备律</b>。老师原话：「不是说知识准备达不到准备律的效果，只是桑代克没从这个角度说。」</p>
+    <p class="small">教材出处补充（S032）：准备工作包括两方面——身心基础（学武术先看身体发育、四肢关节是否灵敏）和学习动机（复习上次所学、查有关资料，以便对新教材产生兴趣）。都是为了调动学习积极性。</p>
+  </div>
+
+  <div class="kp"><h3 style="font-size:18px"><span class="kid">6.11</span>② 练习律：用进废退</h3></div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>已经连上的线，<b>反复用</b>就变粗（<b>应用律</b>：常用 → 联结增强），<b>不用</b>就变细（<b>失用律</b>：不练 → 联结减弱）。猫反复开笼子才熟练；你反复做题才一看就会。<b>启示：学习过程中和结束后都要不断练习。</b></p>
+    <p>题目里长这样：「算不同类型的题」「每天听说必不可少」——只强调<b>练了很多次</b>，<b>没提反馈结果</b>。</p>
+  </div>
+
+  <div class="kp"><h3 style="font-size:18px"><span class="kid">6.12</span>③ 效果律：反馈决定一切（最重要）</h3></div>
+  <div class="blk story"><span class="lab">老师自己的故事</span>
+    <p>老师去学车，教练从来不说她练得对不对，越练越懵；后来她到处问、拿到反馈，进步飞快。所以光有准备、光练，<b>不告诉你对错，你成功不了</b>——这就是效果律最重要的原因，另外两条都<b>从属于</b>它。</p>
+  </div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>行为之后得到的<b>反馈</b>：<b>满意的结果 → 行为频率上升</b>（<b>满意律</b>）；<b>烦恼的结果 → 行为频率下降</b>（<b>烦恼律</b>）。猫逃出去吃到鱼（满意），下次还按；逃出去啥也没有甚至是坨狗屎，就不按了。</p>
+    <p><b>启示：让学生的学习达到自我满意的积极结果，防止一无所获的消极结果。</b>表扬、鼓励、情绪价值都给上。</p>
+    <p>题目里长这样：<b>表扬 / 批评 / 鼓励 / 成绩好坏 / 感受乐趣</b>——只要是对行为结果的反馈，就是效果律。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">6.13 ~ 6.15</span>动物 vs 人，以及评价</h3></div>
+  <div class="blk term"><span class="lab">考试写这些词</span>
+    <ul>
+      <li><b>动物的学习是盲目的；人的学习是有意识的</b>（动物的学习无须以观念为媒介）。人进了笼子会先观察、思考，不会像猫一样又啃又咬。——但这也暴露了桑代克早期研究<b>忽视认知</b>、忽视人学习目的性的<b>局限</b>。</li>
+      <li>三条公律<b>人和动物共有</b>——别因为实验是猫做的就以为人不受影响。</li>
+      <li><b>评价</b>：① 教育心理学史上<b>第一个较为完整</b>的学习理论；② 对教育心理学成为一门<b>独立学科有促进意义</b>。</li>
+    </ul>
+  </div>
+
+  <div class="blk exam"><span class="lab">考场上怎么选（老师给的出题角度表 S024）</span>
+    <div class="tbl-wrap"><table>
+      <tr><th>公律</th><th>解题关键词</th><th>典型例子</th></tr>
+      <tr><td>准备律</td><td>预备、引起兴趣、<b>预习 / 复习旧知</b>、预设问题 → 激发动机</td><td>上新课前预设问题、让学生预习</td></tr>
+      <tr><td>练习律</td><td><b>练习、巩固、重复</b>，应用 or 失用</td><td>勾股定理算不同类型的三角形</td></tr>
+      <tr><td>效果律</td><td><b>反馈</b>：表扬、批评、成绩、乐趣 → 满意 or 烦恼</td><td>成绩好后老师家长表扬鼓励</td></tr>
+    </table></div>
+  </div>
+
+  <div class="quiz" data-a="1"><div class="src">判断（定义角度）</div>
+    <div class="q">桑代克提出的准备律是指学习前的知识或成熟方面的准备。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step">定义角度：准备律是预备定势，属动机范畴，<b>不等同于</b>知识/成熟准备。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="1"><div class="src">真题 · 2014 四川下</div>
+    <div class="q">每次上新课前，老师都会预设问题激发学习，并让学生预习，这符合桑代克「学习定律」中的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>效果律</button><button class="opt"><i>B</i>准备律</button><button class="opt"><i>C</i>练习律</button><button class="opt"><i>D</i>学习律</button></div>
+    <div class="why"><span class="step">例子角度：预设问题、预习 → 激发学习动机 → 提前做好准备。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">真题 · 2024 四川上 · 判断</div>
+    <div class="q">李老师每次在新课开始时会对学生进行适当的复习和引导，帮助学生回忆已有知识。该做法遵循了桑代克学习理论中的准备律。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step">复习相关旧知 → 接下来学新的更方便理解 → 有学习积极性 → 准备律。<b>答案 A</b>。（别被「知识准备不算」那句话带偏——那是定义角度。）</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">单选（观点识记）</div>
+    <div class="q">桑代克的准备律与现代学习心理学中的（　）相一致。</div>
+    <div class="opts"><button class="opt"><i>A</i>动机原理</button><button class="opt"><i>B</i>强化原理</button><button class="opt"><i>C</i>学习的发展准备原理</button><button class="opt"><i>D</i>成熟概念</button></div>
+    <div class="why"><span class="step">准备律属动机范畴 → <b>A 动机原理</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">真题 · 2018 四川下</div>
+    <div class="q">刘老师在教学过程中十分注意对学生进行反馈：学生做得好时予以表扬，做得不好时及时指出使其改正。刘老师的做法体现了桑代克学习理论中的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>效果律</button><button class="opt"><i>B</i>练习律</button><button class="opt"><i>C</i>准备律</button><button class="opt"><i>D</i>应用律</button></div>
+    <div class="why"><span class="step">「反馈」两个字贴脸上了，表扬 + 批评改正都是反馈。<b>答案 A</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">真题 · 2020 四川上</div>
+    <div class="q">在数学课上，学生每次出错时，王老师都注重对学生的引导，积极鼓励学生动脑思考，让学生感受到学习的乐趣，班级学习氛围日益浓厚。这体现了桑代克学习定律中的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>准备律</button><button class="opt"><i>B</i>练习律</button><button class="opt"><i>C</i>效果律</button><button class="opt"><i>D</i>同化律</button></div>
+    <div class="why"><span class="step">出错是行为，引导鼓励、感受乐趣是对行为结果的<b>反馈</b>（满意律角度）。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">单选</div>
+    <div class="q">张老师在讲授「勾股定理」时，会通过要求学生计算不同类型的直角三角形的边长来让学生充分掌握这一定理。这符合桑代克学习基本规律中的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>客观律</button><button class="opt"><i>B</i>准备律</button><button class="opt"><i>C</i>练习律</button><button class="opt"><i>D</i>效果律</button></div>
+    <div class="why"><span class="step">不同类型、算了很多次 → 多次练习，没给任何反馈。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">强化训练</div>
+    <div class="q">越是考试成绩好的学生越愿意学习，越是成绩不好的越不愿意学习。这符合桑代克关于学习规律的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>准备律</button><button class="opt"><i>B</i>练习律</button><button class="opt"><i>C</i>效果律</button><button class="opt"><i>D</i>近因律</button></div>
+    <div class="why"><span class="step">成绩好/不好 = 给予的<b>反馈</b>内容，不是练习本身。有同学选 B 错了。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">强化训练</div>
+    <div class="q">「三天不听耳生，三天不读口生。」想让学生英语水平不断提高，每天的听和说必不可少。这体现了桑代克学习定律中的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>练习律</button><button class="opt"><i>B</i>效果律</button><button class="opt"><i>C</i>准备律</button><button class="opt"><i>D</i>动机律</button></div>
+    <div class="why"><span class="step">听、说是必不可少的重复练习，没说外界给了什么结果。<b>答案 A</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">强化训练 · 易错（很多同学选 D）</div>
+    <div class="q">桑代克曾做过一个实验：被试蒙上眼睛后练习画 4 英寸长的线段，经过 3000 多次练习毫无进步。对该实验结果最适当的解释是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>被试缺乏学习动机</button><button class="opt"><i>B</i>练习过多导致疲劳</button><button class="opt"><i>C</i>被试不知道自己的练习结果</button><button class="opt"><i>D</i>主试未对被试进行学习评价</button></div>
+    <div class="why"><span class="step">3000 次毫无进步 → <b>没有反馈</b>（这个实验就是用来证明效果律最重要）。</span><span class="step">反馈可以从哪来？① 自己看（但被蒙眼了）② 别人说（但没人说）。C「不知道练习结果」把两条都包了；D 只说了「别人没评价」，忽视了蒙眼这一条 → <b>C 更全面，D 片面</b>。</span><span class="step"><b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="blk review"><span class="lab">自己考自己（老师 71:08 的回顾清单）</span>
+    <details class="rc"><summary>实验叫什么（三个别名）？学习的实质两个字？</summary><div class="ans">猫开笼取食实验（饿猫/迷笼/迷箱）；联结（刺激与反应的联结）。</div></details>
+    <details class="rc"><summary>联结靡通过什么建立？受哪三条律支配？哪条最重要？</summary><div class="ans">试误（尝试错误、减少错误）；准备律、练习律、效果律；效果律最重要，其余是附律/从属律。</div></details>
+    <details class="rc"><summary>准备律属于什么范畴？练习律分哪两个？效果律分哪两个？</summary><div class="ans">动机范畴；应用律（常用增强）/失用律（不用减弱）；满意律/烦恼律。</div></details>
+    <details class="rc"><summary>动物的学习是____的，人的学习是____的？三条律只适用于动物吗？</summary><div class="ans">盲目 / 有意识；不是，人和动物共有。</div></details>
+    <details class="rc"><summary>桑代克实验里，是刺激在前还是反应在前？</summary><div class="ans">反应在前（按杠杆），刺激在后（食物）。R→S。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(6)">这站我通了 ✓</button><span class="msg">猫学会开笼子了，你也学会了！</span></div>
+</section>
+<!-- ============ 站 7 ============ -->
+<section class="card station" id="s7" data-s="7" style="--c1:#0071e3;--c2:#00a8b5">
+  <div class="st-head"><div class="st-num">第<br>7 站</div><div><h2>巴甫洛夫：一条狗和一只铃<span class="tag hot">考 8 次 · 本讲最重</span></h2><p class="st-sub">对应视频 92:15 ~ 133:04 · 幻灯片 S044 ~ S073</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事：暴躁的小老头</span>
+    <p>巴甫洛夫是<b>俄国生物学家</b>，研究反射弧的（膝跳反射那种）。他脾气特暴躁，认为自己研究的才是「真科学」，最讨厌别人叫他心理学家——「你才是心理学家，你们全家都是心理学家！」还威胁说谁敢把他的实验用到心理学术语里就开枪崩了他。结果他一去世，大家立刻把他请进了心理学殿堂。固执又有点惨的小老头。</p>
+  </div>
+  <div class="blk term"><span class="lab">基础识记（S045）</span>
+    <ul>
+      <li><b>记忆痕迹衰退说</b>代表人物（和桑代克、亚里士多德一起）</li>
+      <li><b>最早提出「强化」概念</b>——「强化」不是斯金纳独有的词，行为主义都会涉及，但<b>最早</b>提出的是巴甫洛夫</li>
+      <li><b>高级神经活动学说的创始人</b>，高级神经活动生理学的奠基人</li>
+      <li>经典实验：<b>狗进食摇铃实验</b>；理论名：<b>经典性条件作用理论</b>；要点：<b>1 实验、2 反射、2 规律</b></li>
+    </ul>
+  </div>
+
+  <div class="kp"><h3><span class="kid">7.3 / 7.4</span>先搞懂两个词：无条件反射 vs 条件反射</h3></div>
+  <div class="vs">
+    <div class="mini" style="border-color:var(--mint)"><h4>无条件反射 = 先天、本能</h4><p><b>无条件刺激（US）→ 无条件反应（UR）</b><br>吃东西流口水（不流口水就噎死了）、气流进眼睛就眨眼、敲膝盖腿弹起来。<b>不用学，天生就会。</b></p></div>
+    <div class="m">VS</div>
+    <div class="mini" style="border-color:var(--blue)"><h4>条件反射 = 后天、学来的（又叫信号反射）</h4><p><b>条件刺激（CS）→ 条件反应（CR）</b><br>听到上课铃就进教室——刚出生的孩子可不会这样，是后天学的。（「闹钟响就起床」有争议：被吵醒是一回事，建立闹铃意识是另一回事；考的可能性不大。）</p></div>
+  </div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>判断先天后天就<b>问自己一句</b>：「<b>我天生就会对这个东西有反应吗？</b>」所有的狗天生听到铃就流口水吗？不会 → 后天 → 条件。</p>
+    <p>「反应」和「反射」两个词常<b>混用</b>——产生了无条件反应，就代表有了无条件反射。别死掐。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">7.6</span>实验四步：铃声是怎么「变身」的</h3></div>
+  <div class="blk story"><span class="lab">故事：闺蜜与流量</span>
+    <p>老师的比方特别好记——<b>食物和铃声是一对闺蜜</b>，总是一起出现。一起出现的次数多了，铃声<b>「碰瓷」</b>食物、蹭到了流量；后来铃声单独出现，狗心里想「你来了，那她（食物）也马上到」——于是流口水。</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 330" role="img" aria-label="狗进食摇铃实验四步">
+      <g font-size="13" font-weight="700" fill="#1d1d1f">
+        <rect x="20" y="20" width="680" height="60" rx="16" fill="rgba(31,169,113,.12)"/>
+        <text x="40" y="45">① 食物 → 流口水</text><text x="40" y="66" font-size="12" font-weight="400" fill="#48484a">无条件刺激 → 无条件反应 ＝ 无条件反射（先天）</text>
+        <rect x="20" y="92" width="680" height="60" rx="16" fill="rgba(245,180,0,.16)"/>
+        <text x="40" y="117">② 食物 ＋ 铃声 → 流口水　× N 次</text><text x="40" y="138" font-size="12" font-weight="400" fill="#48484a">无条件刺激 ＋ 中性刺激（此时铃声不起作用）→ 仍是无条件反应（狗是因为食物才流）</text>
+        <rect x="20" y="164" width="680" height="60" rx="16" fill="rgba(0,113,227,.12)"/>
+        <text x="40" y="189">③ 铃声 → 流口水</text><text x="40" y="210" font-size="12" font-weight="400" fill="#48484a">条件刺激 → 条件反应 ＝ 条件反射（后天）　← 铃声「变身」了：中性刺激 ➜ 条件刺激</text>
+        <rect x="20" y="236" width="680" height="76" rx="16" fill="rgba(165,80,216,.12)"/>
+        <text x="40" y="261">④ 拔高：铃声 ＋ 灯光 → 流口水 × N 次 ⇒ 灯光 → 流口水</text><text x="40" y="282" font-size="12" font-weight="400" fill="#48484a">条件刺激 1 ＋ 中性刺激 2 → 条件反应；灯光也变身成条件刺激 2 ＝ 条件反射 2</text><text x="40" y="302" font-size="12" font-weight="400" fill="#a550d8">这叫 二级条件作用 / 高级条件作用；①~③ 叫 一级条件作用</text>
+      </g>
+    </svg>
+    <figcaption>老师板书（S049 ~ S062）压成一张图。注意两个「身份转变」：铃声（中性→条件刺激）、流口水（无条件反应→条件反应，虽然动作一样但引起它的对象变了）。</figcaption>
+  </figure>
+
+  <div class="blk trap"><span class="lab">坑 ①：巴甫洛夫是「刺激在前、反应在后」</span>
+    <p>不管铃声还是食物，都是<b>先给刺激，狗再反应</b>——<b>S → R</b>。这和桑代克（R → S）正好相反，第 9 站要考。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">7.8</span>怎么结合才有效？口诀：要么先中性，要么和中性同时</h3></div>
+  <div class="blk plain"><span class="lab">说人话：铃声是「预告」</span>
+    <p>铃声的作用是<b>预告开饭</b>——像养鸡场一打铃鸡就聚过来。所以必须<b>先铃声、紧接着食物</b>（紧接着！隔半天狗就不知道它俩有关系了），或者<b>铃声和食物同时</b>出现。</p>
+    <p><b>先食物、后铃声</b>行不行？<b>不行</b>——狗都吃完、流完哈喇子了，你再摇铃，「咋的，让我跳个舞消化一下？」预告放在饭后就没意义了。</p>
+    <p>翻译成术语：<b>中性刺激在前，后面可以接无条件刺激（一级）或条件刺激（二级）；或者中性刺激与之同时呈现。</b>所以口诀只有一句：<mark>要么先中性，要么和中性同时</mark>。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">7.9 ~ 7.12</span>一级 vs 二级（高级）条件作用：看它「碰瓷」了谁</h3></div>
+  <div class="vs">
+    <div class="mini"><h4>一级条件作用</h4><p>中性刺激跟<b>无条件刺激</b>（先天就有感觉的东西，如食物）结合建立。</p></div>
+    <div class="m">VS</div>
+    <div class="mini"><h4>二级 / 高级条件作用</h4><p>中性刺激跟<b>条件刺激</b>（后天才有感觉的东西，如铃声）结合建立。</p></div>
+  </div>
+  <div class="blk plain"><span class="lab">说人话：替身文学</span>
+    <p>二级里，铃声<b>替了食物的班</b>——以前是食物带着别人（铃声）出道，现在是铃声带着别人（灯光）出道，铃声<b>顶替了食物的岗位</b>。教材那句绕口的话「在条件作用形成以后，条件刺激可以像无条件刺激一样诱发反应，<b>条件刺激似乎成了一种『替代性』的无条件刺激</b>」——以及拔高判断「<b>中性刺激一旦成为条件刺激，就可以作为无条件刺激</b>」——里面的「作为」就是「<b>替代</b>」的意思。</p>
+    <p class="small">能不能建三级、四级？只要狗没问题就可以，但三级勉强、四级更难。</p>
+  </div>
+  <div class="blk hook"><span class="lab">巴甫洛夫三个考点，一口气记</span>
+    <ol><li><b>实验流程</b>：食物→铃声→灯光，每次「结合 N 次，然后单独起作用」。</li><li><b>建立顺序</b>：要么先中性，要么和中性同时。</li><li><b>替代</b>：高级条件作用中，<b>条件刺激替代了无条件刺激</b>（中性一旦成为条件，就可以作为无条件）。</li></ol>
+  </div>
+
+  <div class="kp"><h3><span class="kid">7.13 / 7.14</span>老师的两步做题法（后面所有巴甫洛夫题都用）</h3></div>
+  <div class="blk exam"><span class="lab">考场上怎么选</span>
+    <ol class="steps">
+      <li><b>分清刺激和反应</b>：外界给的 = 刺激；个体（人/狗）做出来的 = 反应。题目问的是「铃声」还是「流口水」？先把反应/反射类选项排掉。</li>
+      <li><b>分清先天和后天</b>：天生就有感觉 = 无条件；后天学来的 = 条件。问自己「我天生对它有反应吗？」</li>
+      <li>（拔高）问一级还是高级 → 往上<b>推导</b>：这个刺激是跟谁结合才有的？跟无条件结合 → 一级；跟条件结合 → 高级。</li>
+    </ol>
+    <p class="small">小技巧：条件反射 = 后天学习的结果 → 能判断出是条件反射，就能判断它是「学习」（望梅止渴既是条件反射也是学习，联动了）。</p>
+  </div>
+
+  <div class="quiz" data-a="2"><div class="src">真题 · 2017 四川下 · 理论识记</div>
+    <div class="q">如果我们想建立某种条件反射，下列做法错误的是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>同时呈现中性刺激和无条件刺激</button><button class="opt"><i>B</i>先呈现中性刺激，紧接着呈现条件刺激</button><button class="opt"><i>C</i>先呈现无条件刺激，紧接着呈现中性刺激</button><button class="opt"><i>D</i>先呈现中性刺激，紧接着呈现无条件刺激</button></div>
+    <div class="why"><span class="step">口诀快速上：要么同时（A ✓），要么先中性（B ✓ 二级，D ✓ 一级）。只有 C 是先无条件后中性——预告放饭后，无效。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">单选 · 例子分析</div>
+    <div class="q">根据经典条件反射作用理论，铃声可以诱发狗的唾液分泌反应，则铃声是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>条件反射</button><button class="opt"><i>B</i>无条件刺激</button><button class="opt"><i>C</i>条件刺激</button><button class="opt"><i>D</i>无条件反应</button></div>
+    <div class="why"><span class="step"><b>第一步</b>问的是铃声 → 刺激，排除 A、D（反射/反应）。</span><span class="step"><b>第二步</b>狗天生对铃声流口水吗？不 → 后天 → 条件。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="1"><div class="src">单选 · 例子分析</div>
+    <div class="q">你闻到炒菜的香味直流口水，在这里，菜香和你分泌的口水分别是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>条件反射、条件刺激</button><button class="opt"><i>B</i>条件刺激、条件反射</button><button class="opt"><i>C</i>后果、中性刺激</button><button class="opt"><i>D</i>反射、条件刺激</button></div>
+    <div class="why"><span class="step">香味是外界给的 → 刺激；流口水是你做的 → 反应/反射。</span><span class="step">先天后天？你闻香水也流口水吗？不会。你得吃过、知道好吃，再闻到才流 → 后天 → 条件。（为啥有人闻榴莲流口水有人不？因为吃过觉得好吃。）<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="1"><div class="src">单选 · 拔高</div>
+    <div class="q">当你看到菜单上的大扇贝时，你感到恶心，因为大扇贝曾经让你呕吐过。在这种情况下菜单上大扇贝的描述对你而言是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>无条件刺激</button><button class="opt"><i>B</i>条件刺激</button><button class="opt"><i>C</i>条件反应</button></div>
+    <div class="why"><span class="step">大扇贝是刺激（反应是恶心/呕吐），排除 C。</span><span class="step">天生看到扇贝就吐吗？不；题干还明说了「因为曾经让你呕吐过」→ 后天。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="1"><div class="src">真题 · 拔高（2024 年考过，老师觉得很简单但很多人错）</div>
+    <div class="q">小陈一坐汽车就会晕车并伴随强烈呕吐；后来他一听说要坐汽车就开始呕吐。小陈的这种反应属于操作性条件反射。</div>
+    <div class="opts"><button class="opt"><i>A</i>正确</button><button class="opt"><i>B</i>错误</button></div>
+    <div class="why"><span class="step">「操作性」是斯金纳的词，强调<b>反应在前刺激在后</b>。考它大概率是拿来和经典性对比 → 看谁在前。</span><span class="step">「听说坐汽车」是外界给的 → 刺激在前；呕吐是他做的 → 反应在后。S→R → 这是<b>经典性</b>，不是操作性。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">真题 · 拔高</div>
+    <div class="q">明朝的徐文长经常被叔叔无端责骂，于是他背着他人对着叔叔家的驴作揖，然后马上鞭打它。重复多次之后，驴一见他作揖就惊跳起来。能解释这一现象的理论是（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>观察学习</button><button class="opt"><i>B</i>内隐学习</button><button class="opt"><i>C</i>经典性条件作用</button><button class="opt"><i>D</i>操作性条件作用</button></div>
+    <div class="why"><span class="step">看最后一句就够：驴是个体，「作揖」（鞠躬）是外界给的 → 刺激；「惊跳」是驴做的 → 反应。刺激在前 → 经典性。</span><span class="step">细看前面：作揖（中性）+ 鞭打（无条件刺激）→ 惊跳，重复多次 → 单独作揖也惊跳。这就是一级条件作用的建立过程。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="3"><div class="src">单选 · 拔高 2（需要推导，老师带着推了一遍）</div>
+    <div class="q">当学生进考场或者当老师宣布即将举行考试时，学生感到非常焦虑，这可用经典条件作用理论的（　）来解释。</div>
+    <div class="opts"><button class="opt"><i>A</i>一级条件作用</button><button class="opt"><i>B</i>条件作用的消退</button><button class="opt"><i>C</i>刺激的泛化与分化</button><button class="opt"><i>D</i>高级条件作用</button></div>
+    <div class="why"><span class="step"><b>第一步</b>进考场/宣布考试 = 刺激，焦虑 = 反应。题目讲的是刺激→反应的联结建立，没提「光给刺激不反应了」（消退），也没有两个相似刺激（泛化/分化）→ 排除 B、C。</span><span class="step"><b>第二步</b>天生进考场就焦虑吗？不 → 后天 → 是条件反射。那它是跟谁结合才建立的？<b>推导</b>：为什么进考场焦虑？大概率因为<b>失败</b>——「进考场 + 失败 → 焦虑」。</span><span class="step"><b>第三步</b>问：失败是无条件刺激还是条件刺激？小孩天天摔倒、吃不进饭，天生难受吗？不 → 失败也是<b>后天</b>才有感觉的 → <b>条件刺激</b>。</span><span class="step">跟条件刺激结合建立 → <b>高级条件作用，答案 D</b>。（这里的「失败」就相当于狗实验里的「铃声」。）</span></div><div class="verdict"></div></div>
+
+  <div class="blk review"><span class="lab">自己考自己（老师 151:32 的回顾）</span>
+    <details class="rc"><summary>实验叫什么？一级条件作用跟谁结合建立？二级又叫什么、跟谁结合？</summary><div class="ans">狗进食摇铃实验；一级跟无条件刺激（先天有感觉的）结合；二级又叫高级条件作用，跟条件刺激（后天有感觉的，如铃声）结合。</div></details>
+    <details class="rc"><summary>建立顺序的口诀？为什么「先食物后铃声」不行？</summary><div class="ans">要么先中性，要么和中性同时。因为铃声是预告，放在饭后就没有预告作用了。</div></details>
+    <details class="rc"><summary>「中性刺激一旦成为条件刺激，就可以作为无条件刺激」里的「作为」是什么意思？</summary><div class="ans">替代。高级条件作用里，条件刺激（铃声）替代了无条件刺激（食物）的位置去和新的中性刺激结合。</div></details>
+    <details class="rc"><summary>无条件反射和条件反射怎么区分？举一个例子。</summary><div class="ans">先天本能 vs 后天学习。食物→流口水是无条件；铃声→流口水是条件。</div></details>
+    <details class="rc"><summary>做巴甫洛夫题的两步是什么？</summary><div class="ans">① 分刺激（外界给）和反应（个体做）；② 分先天（无条件）和后天（条件）。拔高再推导跟谁结合。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(7)">这站我通了 ✓</button><span class="msg">铃声一响，你也条件反射地会做题了！</span></div>
+</section>
+<!-- ============ 站 8 ============ -->
+<section class="card station" id="s8" data-s="8" style="--c1:#5e5ce6;--c2:#a550d8">
+  <div class="st-head"><div class="st-num">第<br>8 站</div><div><h2>第一 / 第二信号系统：有没有「说话」<span class="tag hot">成语题专场</span></h2><p class="st-sub">对应视频 133:04 ~ 145:41 · 幻灯片 S074 ~ S079</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事：巴甫洛夫的弟弟</span>
+    <p>巴甫洛夫做狗实验时顺手拿弟弟也试了试：每次给食物就摇铃，后来弟弟一听铃声也流口水——说明<b>人也有</b>这种「听到声音就反应」的本事，人和动物都有，这叫<b>第一信号系统</b>。</p>
+    <p>但人比狗多了一样东西：<b>语言</b>。老师跟你<b>描述</b>一块提拉米苏——咖啡液泡的、上面有蓝莓、微苦带甜——你听完流口水了。这次刺激不是蛋糕本身，而是<b>「话」</b>。靠语言当中介引起的条件反射，叫<b>第二信号系统</b>，<b>人独有</b>——因为狗没有语言。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">8.1 ~ 8.3</span>两个信号系统（都是条件反射，都是大脑皮层功能）</h3></div>
+  <div class="vs">
+    <div class="mini"><h4>第一信号系统</h4><p><b>物理性的、具体的</b>条件刺激：声、光、雷、电。<br><b>人 + 动物都有</b>。<br>狗听铃流口水；人听铃回教室坐好。</p></div>
+    <div class="m">VS</div>
+    <div class="mini"><h4>第二信号系统</h4><p><b>以语言为中介</b>的、抽象的条件刺激。<br><b>人特有</b>。<br>语言有几种形式（了解即可，不考多选）：</p>
+      <ul style="font-size:14.5px"><li><b>口头语言</b>：谈虎色变、谈梅生津（谈 = 说）</li><li><b>书面语言</b>：看到「虎」字就害怕</li><li><b>内部言语</b>：一想到测验就焦虑（脑子里在说话，不是图片）</li><li><b>交通语言</b>（有争议，单独记）：司机看到红灯停车——因为从小学过「红灯停」，红灯有了意义</li><li>其他：哑语、旗语</li></ul></div>
+  </div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>分不清「声光影电」？不要紧，<b>只看有没有「语言」两个字</b>：刺激是<b>通过语言</b>传给你的 → 第二；不是语言传的（一个声音、一个影子、一个图样）→ 第一。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">8.4</span>老师的三步判断法</h3></div>
+  <figure>
+    <svg viewBox="0 0 720 250" role="img" aria-label="信号系统判断流程">
+      <g font-size="13.5" font-weight="700">
+        <rect x="20" y="20" width="680" height="46" rx="14" fill="rgba(94,92,230,.14)"/><text x="360" y="49" text-anchor="middle" fill="#1d1d1f">① 先问：先天就会？还是后天学的？</text>
+        <line x1="200" y1="66" x2="140" y2="100" stroke="#c7c7cc" stroke-width="2"/><line x1="520" y1="66" x2="580" y2="100" stroke="#c7c7cc" stroke-width="2"/>
+        <rect x="20" y="100" width="240" height="46" rx="14" fill="rgba(31,169,113,.16)"/><text x="140" y="129" text-anchor="middle" fill="#1fa971">先天 → 无条件反射（本能）</text>
+        <rect x="300" y="100" width="400" height="46" rx="14" fill="rgba(0,113,227,.12)"/><text x="500" y="129" text-anchor="middle" fill="#0071e3">后天 → 条件反射 → ② 再问：刺激靠语言传的吗？</text>
+        <line x1="420" y1="146" x2="380" y2="180" stroke="#c7c7cc" stroke-width="2"/><line x1="580" y1="146" x2="620" y2="180" stroke="#c7c7cc" stroke-width="2"/>
+        <rect x="260" y="180" width="220" height="46" rx="14" fill="rgba(0,168,181,.16)"/><text x="370" y="209" text-anchor="middle" fill="#00a8b5">没语言 → 第一信号系统</text>
+        <rect x="500" y="180" width="200" height="46" rx="14" fill="rgba(165,80,216,.16)"/><text x="600" y="209" text-anchor="middle" fill="#a550d8">有语言 → 第二信号系统</text>
+      </g>
+      <text x="20" y="240" font-size="12.5" fill="#e5322d" font-weight="700">③ 偷懒法：主角是动物？后天的那只能是第一，动物压根没有语言。</text>
+    </svg>
+    <figcaption>老师 138:41 的解题步骤。「第一和第二的前提都是条件反射」——所以先排本能。</figcaption>
+  </figure>
+
+  <div class="blk trap"><span class="lab">坑 ①：不许加戏</span>
+    <p class="quote">题目没说的你不许延伸！杯弓蛇影里传给他的就是一个影子，有说话吗？没有。你不要在这说「哎呀我大脑里想到太可怕了」——那叫加戏。</p>
+    <p>判断第一还是第二，看的是<b>刺激怎么传递给他</b>——通过语言，还是通过一个图样。<b>个体自己在那叭叭讲话没用</b>。</p>
+  </div>
+  <div class="blk trap"><span class="lab">坑 ②：典故不一定是第二</span>
+    <p>「望梅止渴」<b>从字面看</b>：望着梅子流口水，没人说话 → 第一。<b>从典故看</b>：曹操对士兵<b>说</b>「前方有梅林」，士兵口里生津 → 曹老板讲话了 → 第二。所以要看题目<b>具体描述</b>，不是看到典故就选第二。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">8.5</span>成语判定全表（老师课上逐个讲的）</h3></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>例子</th><th>刺激 → 反应</th><th>先天/后天</th><th>有语言？</th><th>判定</th></tr>
+    <tr><td>迎风流泪</td><td>风 → 流泪</td><td>先天，谁被风吹都流</td><td>—</td><td><b>无条件反射（本能）</b></td></tr>
+    <tr><td>谈虎色变</td><td>谈论老虎 → 脸色变</td><td>后天（没见过老虎哪知道可怕）</td><td>有（谈 = 说）</td><td><b>第二</b></td></tr>
+    <tr><td>杯弓蛇影</td><td>弓的倒影 → 害怕</td><td>后天</td><td>无（蛇和弓都不会说话）</td><td><b>第一</b></td></tr>
+    <tr><td>尝梅生津</td><td>梅子进嘴 → 流口水</td><td>先天（吃东西不流口水噎死了）</td><td>—</td><td><b>无条件反射</b></td></tr>
+    <tr><td>望梅止渴（字面）</td><td>看到梅子 → 流口水</td><td>后天（没见过梅子不会流）</td><td>无</td><td><b>第一</b></td></tr>
+    <tr><td>望梅止渴（曹操典故）</td><td>曹操说「前方有梅林」→ 生津</td><td>后天</td><td>有</td><td><b>第二</b></td></tr>
+    <tr><td>闻过则喜</td><td>听别人说自己的过错 → 高兴</td><td>后天</td><td>有（听闻别人讲）</td><td><b>第二</b></td></tr>
+    <tr><td>闻鸡起舞</td><td>鸡叫声 → 起床</td><td>后天</td><td>无（鸡不会说话，只是个声音）</td><td><b>第一</b></td></tr>
+    <tr><td>导盲犬看红灯停下</td><td>红灯 → 停</td><td>后天</td><td>动物，没语言</td><td><b>第一</b></td></tr>
+    <tr><td>狗听主人叫名字跑过去</td><td>名字声音 → 跑</td><td>后天（练出来的）</td><td>动物，没语言</td><td><b>第一</b></td></tr>
+    <tr><td>学生一想到 / 听到要测验就焦虑</td><td>想到测验 → 焦虑</td><td>后天</td><td>有（内部言语 / 口头）</td><td><b>第二</b></td></tr>
+    <tr><td>纸鸢为羹（同学课后问的）</td><td>看到大雁 → 打算做羹汤</td><td>后天</td><td>无（雁没跟他说话，只是视觉看到）</td><td><b>第一</b></td></tr>
+  </table></div>
+  <div class="blk hook"><span class="lab">钩子</span>
+    <p><b>「进嘴」是本能，「看到」是第一，「谈 / 闻（听说）/ 想到」是第二，「动物」永远第一。</b></p>
+  </div>
+
+  <div class="quiz" data-a="1"><div class="src">自测</div>
+    <div class="q">「谈虎色变」和「杯弓蛇影」分别属于（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>都是第一信号系统</button><button class="opt"><i>B</i>第二信号系统、第一信号系统</button><button class="opt"><i>C</i>第一信号系统、第二信号系统</button><button class="opt"><i>D</i>都是无条件反射</button></div>
+    <div class="why"><span class="step">谈虎 = 说话传递 → 第二；杯弓蛇影 = 看到影子、没人说话 → 第一。都是后天，不是本能。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="0"><div class="src">自测</div>
+    <div class="q">「尝梅生津」属于（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>无条件反射</button><button class="opt"><i>B</i>第一信号系统</button><button class="opt"><i>C</i>第二信号系统</button></div>
+    <div class="why"><span class="step">看清「尝」——已经放进嘴里了，吃东西流口水是本能，不用学。<b>答案 A</b>。老师说好多同学这个错了。</span></div><div class="verdict"></div></div>
+
+  <div class="blk review"><span class="lab">自己考自己</span>
+    <details class="rc"><summary>第一、第二信号系统的区别一句话？谁有？</summary><div class="ans">第一：物理性刺激，人和动物都有；第二：以语言为中介，人特有。</div></details>
+    <details class="rc"><summary>判断的三步是什么？</summary><div class="ans">① 先天→无条件反射；② 后天→看有无语言（有→第二，无→第一）；③ 动物后天只能是第一。</div></details>
+    <details class="rc"><summary>望梅止渴为什么可能是第一也可能是第二？</summary><div class="ans">字面：望着梅子，没语言→第一；典故：曹操说前方有梅林，有语言→第二。看题目具体描述。</div></details>
+    <details class="rc"><summary>「一想到测验就焦虑」是哪种语言？</summary><div class="ans">内部言语（大脑里在说话）→ 第二信号系统。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(8)">这站我通了 ✓</button><span class="msg">成语题不再怕！</span></div>
+</section>
+<!-- ============ 站 9 ============ -->
+<section class="card station" id="s9" data-s="9" style="--c1:#1fa971;--c2:#0071e3">
+  <div class="st-head"><div class="st-num">第<br>9 站</div><div><h2>四个基本规律 + 溯源拔高<span class="tag hot">例子题为主</span></h2><p class="st-sub">对应视频 145:41 ~ 158:19 · 幻灯片 S076 ~ S086</p></div></div>
+
+  <div class="blk story"><span class="lab">先听个故事：狗的一生四阶段</span>
+    <p>还是那条狗。① 它从「对铃声没感觉」到「一听铃声就流口水」——这个从无到有的过程叫<b>获得</b>。② 后来主人只摇铃、再不给饭，摇了很多次……狗也不傻：「你再摇我也不流了，不跟你玩了」——反应越来越弱直到消失，叫<b>消退</b>。③ 有一天主人吹<b>口哨</b>，狗一听「跟铃声挺像」，也流口水了——它<b>分不清</b>两个相似刺激、做了<b>相同反应</b>，叫<b>泛化</b>。④ 主人开始训练：摇铃给饭，吹口哨不给饭，反复多次。狗又聪明了：铃声流、口哨不流——<b>分得清</b>了，对相似刺激做<b>不同反应</b>，叫<b>分化</b>。</p>
+  </div>
+
+  <div class="kp"><h3><span class="kid">9.1 / 9.2</span>获得与消退</h3></div>
+  <div class="vs">
+    <div class="mini"><h4>获得：无 → 有</h4><p>条件刺激（铃声）反复与无条件刺激（食物）相匹配，使条件刺激获得信号意义的过程。就是<b>条件反射的建立过程</b>。</p></div>
+    <div class="m">VS</div>
+    <div class="mini"><h4>消退：有 → 少 → 无</h4><p>条件反射形成后，条件刺激重复出现多次而<b>没有无条件刺激相伴随</b>，条件反应<b>变弱，最终消失</b>。（光给铃声不给食物。）</p></div>
+  </div>
+
+  <div class="kp"><h3><span class="kid">9.3 / 9.4</span>泛化与分化</h3></div>
+  <div class="vs">
+    <div class="mini" style="border-color:var(--orange)"><h4>泛化：相似刺激 → 相同反应（分不清）</h4><p>学会对某一特定条件刺激反应后，<b>其他相类似的刺激也能诱发</b>该反应。<br>例：一朝被蛇咬，十年怕井绳（蛇和绳分不清）；杯弓蛇影（弓影和蛇分不清）；分不清相似的字；分不清「勇敢」和「鲁莽」。<br>好处：<b>让学习从一种情境迁移到另一种情境</b>（语文课的高效方法迁到英语课）。</p></div>
+    <div class="m">VS</div>
+    <div class="mini" style="border-color:var(--mint)"><h4>分化：相似刺激 → 不同反应（分得清）</h4><p>通过<b>选择性强化和消退</b>（铃声给饭、口哨不给），学会对条件刺激和类似刺激做出<b>不同的反应</b>。<br>例：能分辨「谦让」和「退缩」。<br>好处：<b>对不同情境做出不同的恰当反应，避免盲目行动</b>。</p></div>
+  </div>
+  <div class="blk plain"><span class="lab">说人话</span>
+    <p>泛化 = 「差不多就行」；分化 = 「不一样就得区分」。两者<b>互补</b>：一个帮你把好东西迁过去，一个帮你做恰当区分，合起来学习效果才好。它们都是<b>中性词</b>，不一定是坏事。</p>
+  </div>
+  <div class="blk exam"><span class="lab">考场上怎么选</span>
+    <p>用「分得清 / 分不清」能做七八成题；剩下的<b>从定义角度</b>更稳：题干出现「<b>相似 / 类似情境 → 相同 / 类似反应</b>」→ 泛化；「<b>经训练后仅对某一个反应</b>」→ 分化。</p>
+  </div>
+
+  <div class="quiz" data-a="1"><div class="src">单选</div>
+    <div class="q">学生在数学课上学会了端坐在座位上认真做作业，在英语课上学生也做出类似行为。这表明学习行为存在（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>分化</button><button class="opt"><i>B</i>泛化</button><button class="opt"><i>C</i>类化</button><button class="opt"><i>D</i>消退</button></div>
+    <div class="why"><span class="step">相似情境（数学课→英语课）做出类似行为 → 定义角度直接对上泛化。这题用「分不清」反而不好做，用定义更快。<b>答案 B</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="2"><div class="src">单选</div>
+    <div class="q">经典条件作用理论认为，有机体学会对某一特定的条件刺激做出条件反应以后，类似的刺激也能诱发该条件反应。这一现象称为（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>消退</button><button class="opt"><i>B</i>分化</button><button class="opt"><i>C</i>泛化</button><button class="opt"><i>D</i>获得</button></div>
+    <div class="why"><span class="step">「类似的刺激也能诱发」= 相似刺激相同反应。<b>答案 C</b>。</span></div><div class="verdict"></div></div>
+
+  <div class="quiz" data-a="3"><div class="src">单选</div>
+    <div class="q">狗最初对圆形和椭圆形做出同样的反应，经训练后仅对圆形做出该反应，这是条件反射的（　）。</div>
+    <div class="opts"><button class="opt"><i>A</i>获得</button><button class="opt"><i>B</i>消退</button><button class="opt"><i>C</i>泛化</button><button class="opt"><i>D</i>分化</button></div>
+    <div class="why"><span class="step">一定要看到后面：「经训练后<b>仅对圆形</b>反应」→ 能分清圆和椭圆了。<b>答案 D</b>。（前半句「同样的反应」是泛化，那是训练前。）</span></div><div class="verdict"></div></div>
+
+  <div class="kp"><h3><span class="kid">10.1 ~ 10.4</span>溯源拔高：经典性 vs 操作性（S086）</h3></div>
+  <div class="blk story"><span class="lab">先听个故事</span>
+    <p>把猫和狗放在一起看：<b>狗</b>是先听到铃（刺激）再流口水（反应），<b>S → R</b>；<b>猫</b>是先按杠杆（反应）再吃到鱼（刺激），<b>R → S</b>。斯金纳后来把「先做动作、再得结果」这种叫<b>操作性条件反射</b>——所以<b>桑代克和斯金纳从性质上都属于操作性</b>，巴甫洛夫是<b>经典性</b>。</p>
+    <p>但它俩的<b>实质是一样的</b>：都是刺激和反应建立联结（S-R）；不一样的只是<b>建立过程</b>：谁在前谁在后。</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 200" role="img" aria-label="经典性与操作性对比">
+      <g font-size="14" font-weight="800">
+        <rect x="20" y="20" width="330" height="150" rx="18" fill="rgba(0,113,227,.10)"/><text x="185" y="50" text-anchor="middle" fill="#0071e3">经典性（巴甫洛夫）</text>
+        <rect x="370" y="20" width="330" height="150" rx="18" fill="rgba(240,115,10,.10)"/><text x="535" y="50" text-anchor="middle" fill="#f0730a">操作性（桑代克 · 斯金纳）</text>
+      </g>
+      <g font-size="15" font-weight="800" fill="#1d1d1f">
+        <rect x="50" y="75" width="100" height="40" rx="12" fill="#fff" stroke="#0071e3"/><text x="100" y="101" text-anchor="middle">刺激 S</text>
+        <text x="185" y="101" text-anchor="middle" fill="#0071e3">→</text>
+        <rect x="220" y="75" width="100" height="40" rx="12" fill="#fff" stroke="#0071e3"/><text x="270" y="101" text-anchor="middle">反应 R</text>
+        <rect x="400" y="75" width="100" height="40" rx="12" fill="#fff" stroke="#f0730a"/><text x="450" y="101" text-anchor="middle">反应 R</text>
+        <text x="535" y="101" text-anchor="middle" fill="#f0730a">→</text>
+        <rect x="570" y="75" width="100" height="40" rx="12" fill="#fff" stroke="#f0730a"/><text x="620" y="101" text-anchor="middle">刺激 S</text>
+      </g>
+      <text x="185" y="148" text-anchor="middle" font-size="12.5" fill="#48484a">铃声 → 流口水（先给刺激）</text>
+      <text x="535" y="148" text-anchor="middle" font-size="12.5" fill="#48484a">按杠杆 → 得食物（先做反应，强化在行为后）</text>
+      <text x="360" y="192" text-anchor="middle" font-size="13" font-weight="800" fill="#1fa971">实质相同：都是 S-R 联结 ｜ 建立过程不同：谁在前</text>
+    </svg>
+    <figcaption>老师说这道拔高「小白学员一次听不明白不要紧，多捋两遍」。</figcaption>
+  </figure>
+  <div class="blk exam"><span class="lab">幻灯片上的四道判断（S086）</span>
+    <ul>
+      <li>操作性条件反射理论强调<b>行为前</b>的强化 → <b>错</b>（行为在前，强化在后）</li>
+      <li>桑代克和斯金纳的学习理论从性质上看都属于操作性条件反射 → <b>对</b></li>
+      <li>经典条件反射的建立过程与操作条件反射的建立过程<b>无根本差异</b> → <b>错</b>（S→R vs R→S，有差异）</li>
+      <li>经典性条件理论和操作性条件理论的<b>实质相同</b> → <b>对</b>（都是 S-R 联结）</li>
+    </ul>
+  </div>
+
+  <div class="blk teacher"><span class="lab">老师下课前的叮嘱（155:00 ~ 158:19）</span>
+    <p class="quote">今天讲了很多做题技巧，一定要用。我太清楚你们在某些题为什么会错、为什么钻牛角尖，所以才做这个总结。听进去、用起来，少走很多弯路。别编题了，先把课上的弄明白。</p>
+    <p class="small">今日作业：梳理第四章第二节行为主义部分（知识核心 + 过一遍例子和题目）；预习认知主义。</p>
+  </div>
+
+  <div class="blk review"><span class="lab">自己考自己</span>
+    <details class="rc"><summary>获得、消退各是什么？消退的操作是？</summary><div class="ans">获得：条件反射从无到有的建立；消退：只给条件刺激不给无条件刺激，条件反应变弱直到消失。</div></details>
+    <details class="rc"><summary>泛化和分化的解题关键各六个字？</summary><div class="ans">泛化：相似刺激相同反应（分不清）；分化：相似刺激不同反应（分得清）。</div></details>
+    <details class="rc"><summary>分化是通过什么实现的？泛化对学习有什么好处？</summary><div class="ans">选择性强化和消退；泛化让学习从一种情境迁移到另一种情境。</div></details>
+    <details class="rc"><summary>桑代克属于经典性还是操作性？经典与操作实质相同吗？建立过程相同吗？</summary><div class="ans">操作性（R→S，和斯金纳一样）；实质相同（都是 S-R 联结）；建立过程不同（S→R vs R→S）。</div></details>
+  </div>
+  <div class="done-row"><button class="btn done" onclick="markDone(9)">这站我通了 ✓</button><span class="msg">全部知识点讲完！去终点站验收</span></div>
+</section>
+<!-- ============ 站 10 ============ -->
+<section class="card station" id="s10" data-s="10" style="--c1:#e0367a;--c2:#a550d8">
+  <div class="st-head"><div class="st-num">终点<br>站</div><div><h2>三天后回来做这一页<span class="tag">防遗忘</span></h2><p class="st-sub">一张全景图 · 全部钩子 · 20 题混合闯关</p></div></div>
+
+  <div class="blk story"><span class="lab">怎么用这一站</span>
+    <p><b>今天</b>：读完前 9 站直接做下面 20 题，看看有几个能选对。<b>明天</b>：不看前面，先复述「全景图」里每个格子，再做 20 题。<b>三天后</b>：再来一次。三次都能拿 18 分以上，这一讲就是你的了。</p>
+  </div>
+
+  <div class="kp"><h3>全景图：一眼看完整讲</h3></div>
+  <figure>
+    <svg viewBox="0 0 720 420" role="img" aria-label="心理学12全景图">
+      <g font-size="12.5" font-weight="700" fill="#1d1d1f">
+        <rect x="20" y="20" width="680" height="120" rx="18" fill="rgba(0,113,227,.08)" stroke="rgba(0,113,227,.25)"/>
+        <text x="36" y="44" font-size="14" fill="#0071e3">一楼 · 学习分类</text>
+        <rect x="36" y="58" width="150" height="70" rx="12" fill="#fff"/><text x="111" y="80" text-anchor="middle">奥苏贝尔 · 两把尺子</text><text x="111" y="100" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">谁给的？懂了没？</text><text x="111" y="118" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">互不依赖 · 无高低</text>
+        <rect x="200" y="58" width="150" height="70" rx="12" fill="#fff"/><text x="275" y="80" text-anchor="middle">加涅 · 榜单+梯子</text><text x="275" y="100" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">颜值太动人（无高低）</text><text x="275" y="118" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">心机所言别念这题（低→高）</text>
+        <rect x="364" y="58" width="150" height="70" rx="12" fill="#fff"/><text x="439" y="80" text-anchor="middle">阿瑟雷伯 · 灯亮没</text><text x="439" y="100" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">内隐（不知不觉）</text><text x="439" y="118" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">外显（有意识）</text>
+        <rect x="528" y="58" width="156" height="70" rx="12" fill="#fff"/><text x="606" y="80" text-anchor="middle">我国学者 · 按内容</text><text x="606" y="100" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">冯忠良：+社会/行为规范</text><text x="606" y="118" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">潘菽两版（四川未考）</text>
+
+        <rect x="20" y="156" width="680" height="60" rx="18" fill="rgba(165,80,216,.08)" stroke="rgba(165,80,216,.25)"/>
+        <text x="36" y="180" font-size="14" fill="#a550d8">二楼 · 四大流派</text>
+        <text x="36" y="204" font-size="12" font-weight="400" fill="#48484a">行为（桑巴死板·看外在）｜认知（苛曼不输加涅·信息加工）｜建构（健脾胃度·双向主观）｜人本（罗马人·全人情感）</text>
+
+        <rect x="20" y="232" width="680" height="170" rx="18" fill="rgba(240,115,10,.08)" stroke="rgba(240,115,10,.25)"/>
+        <text x="36" y="256" font-size="14" fill="#f0730a">行为主义展厅 · 76 次高频</text>
+        <rect x="36" y="270" width="200" height="118" rx="12" fill="#fff"/><text x="136" y="292" text-anchor="middle">华生 · 概述</text><text x="136" y="312" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">小阿尔伯特（恐惧泛化）</text><text x="136" y="330" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">外显行为 · 实验法 · S-R 无箭头</text><text x="136" y="348" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">别称联结主义（创始人桑代克）</text><text x="136" y="366" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">第一次革命 · 第一势力</text>
+        <rect x="250" y="270" width="210" height="118" rx="12" fill="#fff"/><text x="355" y="292" text-anchor="middle">桑代克 🐱 试误说 R→S</text><text x="355" y="312" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">饿猫开笼 · 学习=形成联结 · 通过试误</text><text x="355" y="330" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">准备律（动机）· 练习律（用/不用）</text><text x="355" y="348" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">效果律（反馈，主律）</text><text x="355" y="366" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">动物盲目·人有意识 · 第一个完整理论</text>
+        <rect x="474" y="270" width="210" height="118" rx="12" fill="#fff"/><text x="579" y="292" text-anchor="middle">巴甫洛夫 🐶 经典性 S→R</text><text x="579" y="312" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">无条件（先天）/条件（后天）</text><text x="579" y="330" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">先中性 or 与中性同时 · 一级/高级</text><text x="579" y="348" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">第一信号（无语言）/第二（语言）</text><text x="579" y="366" text-anchor="middle" font-size="11" font-weight="400" fill="#48484a">获得·消退·泛化（分不清）·分化</text>
+      </g>
+      <text x="360" y="414" text-anchor="middle" font-size="11.5" fill="#86868b">斯金纳 🐭 · 班杜拉 👶 · 认知 · 建构 · 人本 → 下一讲</text>
+    </svg>
+    <figcaption>盖住这张图，能自己把每个格子说出来，就是「记住了」。</figcaption>
+  </figure>
+
+  <div class="kp"><h3>所有记忆钩子，一页收齐</h3></div>
+  <div class="grid2">
+    <div class="mini"><h4>分类</h4><p>谁给的？懂了没？｜奥苏爱接受，布鲁纳爱发现｜编口诀 = 机械｜颜值太动人｜心机所言别念这题｜不知不觉 = 内隐</p></div>
+    <div class="mini"><h4>流派 & 人名</h4><p>桑巴死板 ｜ 苛曼不输加涅 ｜ 健脾胃度 ｜ 罗马人 ｜ 猫狗鼠宝宝</p></div>
+    <div class="mini"><h4>桑代克</h4><p>桑老三创教心一生一世本心差｜教心奠基创始父，动物呀｜一实验三规律一评价｜效果律是老大，另两条是小弟｜准备 = 想学（动机）</p></div>
+    <div class="mini"><h4>巴甫洛夫</h4><p>刺激别人给、反应自己做｜天生有感觉 = 无条件｜要么先中性，要么和中性同时｜碰瓷谁 = 几级｜作为 = 替代｜有语言第二、无语言第一、动物永远第一｜分不清泛化、分得清分化</p></div>
+  </div>
+
+  <div class="kp"><h3>20 题混合闯关（答完自动算分）</h3></div>
+  <div id="finalquiz">
+  <div class="quiz" data-a="1"><div class="src">1</div><div class="q">「四种学习相互交叉，无高低级之分」——这是谁的观点？</div><div class="opts"><button class="opt"><i>A</i>加涅</button><button class="opt"><i>B</i>奥苏贝尔</button><button class="opt"><i>C</i>布鲁纳</button><button class="opt"><i>D</i>华生</button></div><div class="why">奥苏贝尔的两个维度互不依赖，四种学习无高低。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="2"><div class="src">2</div><div class="q">小华用自编谐音记单词，按奥苏贝尔的观点属于（　）。</div><div class="opts"><button class="opt"><i>A</i>有意义的接受学习</button><button class="opt"><i>B</i>有意义的发现学习</button><button class="opt"><i>C</i>机械的接受学习</button><button class="opt"><i>D</i>机械的发现学习</button></div><div class="why">单词别人给的 → 接受；谐音是人为赋予的联系 → 不算有意义 → 机械。<b>C</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="0"><div class="src">3</div><div class="q">加涅学习水平分类中，最低的一级是（　）。</div><div class="opts"><button class="opt"><i>A</i>信号学习</button><button class="opt"><i>B</i>刺激-反应学习</button><button class="opt"><i>C</i>连锁学习</button><button class="opt"><i>D</i>辨别学习</button></div><div class="why">心机所言别念这题：「心」= 信号学习最低。<b>A</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="3"><div class="src">4</div><div class="q">学生学会用「先分类再记忆」的方法记各种材料，属于加涅学习结果中的（　）。</div><div class="opts"><button class="opt"><i>A</i>言语信息</button><button class="opt"><i>B</i>智慧技能</button><button class="opt"><i>C</i>态度</button><button class="opt"><i>D</i>认知策略</button></div><div class="why">管自己怎么学的方法、技巧、调控 → 认知策略。<b>D</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="1"><div class="src">5</div><div class="q">加涅的「刺激-反应学习」强调（　）。</div><div class="opts"><button class="opt"><i>A</i>刺激在前，反应在后</button><button class="opt"><i>B</i>反应在前，刺激在后，只有一个动作</button><button class="opt"><i>C</i>一连串动作</button><button class="opt"><i>D</i>语言连成串</button></div><div class="why">举手（一个动作）→ 表扬。反应在前。别和行为主义的 S-R（无箭头）混。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="2"><div class="src">6</div><div class="q">认为知识是主观的、个体与环境双向相互作用的流派是（　）。</div><div class="opts"><button class="opt"><i>A</i>行为主义</button><button class="opt"><i>B</i>认知主义</button><button class="opt"><i>C</i>建构主义</button><button class="opt"><i>D</i>人本主义</button></div><div class="why">建构主义源于认知，但强调知识主观、双向。<b>C</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="1"><div class="src">7</div><div class="q">联结主义的创始人是（　）。</div><div class="opts"><button class="opt"><i>A</i>华生</button><button class="opt"><i>B</i>桑代克</button><button class="opt"><i>C</i>巴甫洛夫</button><button class="opt"><i>D</i>斯金纳</button></div><div class="why">行为主义创始人是华生，联结主义创始人是桑代克。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="3"><div class="src">8</div><div class="q">行为主义在心理学发展史上的地位是（　）。</div><div class="opts"><button class="opt"><i>A</i>第二次革命</button><button class="opt"><i>B</i>第三势力</button><button class="opt"><i>C</i>最早研究意识</button><button class="opt"><i>D</i>第一次革命、第一势力</button></div><div class="why">推翻了研究意识的前人 → 第一次革命；信徒众多 → 第一势力。<b>D</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="0"><div class="src">9</div><div class="q">桑代克 1903 年出版的著作是（　）。</div><div class="opts"><button class="opt"><i>A</i>《教育心理学》</button><button class="opt"><i>B</i>《人的本性》</button><button class="opt"><i>C</i>《学习心理》</button><button class="opt"><i>D</i>《个别差异及其起因》</button></div><div class="why">桑老三创教心；后三本是 1913-1914 的三卷本。<b>A</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="2"><div class="src">10</div><div class="q">桑代克认为学习的实质是（　）。</div><div class="opts"><button class="opt"><i>A</i>顿悟</button><button class="opt"><i>B</i>建立条件反射</button><button class="opt"><i>C</i>形成刺激与反应的联结</button><button class="opt"><i>D</i>信息加工</button></div><div class="why">学习即联结；通过试误建立。<b>C</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="2"><div class="src">11</div><div class="q">三条学习公律中最重要的是（　）。</div><div class="opts"><button class="opt"><i>A</i>准备律</button><button class="opt"><i>B</i>练习律</button><button class="opt"><i>C</i>效果律</button><button class="opt"><i>D</i>三者同等重要</button></div><div class="why">效果律是主律，准备律和练习律是附律/从属律。<b>C</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="0"><div class="src">12</div><div class="q">桑代克所说的「准备」属于（　）范畴。</div><div class="opts"><button class="opt"><i>A</i>动机</button><button class="opt"><i>B</i>知识</button><button class="opt"><i>C</i>成熟</button><button class="opt"><i>D</i>能力</button></div><div class="why">预备定势，属动机范畴，不等同于知识准备或成熟。<b>A</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="1"><div class="src">13</div><div class="q">「学生做对题老师就贴小红花，做错就扣分」体现了（　）。</div><div class="opts"><button class="opt"><i>A</i>练习律</button><button class="opt"><i>B</i>效果律</button><button class="opt"><i>C</i>准备律</button><button class="opt"><i>D</i>失用律</button></div><div class="why">小红花/扣分是对行为结果的反馈（满意/烦恼）。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="1"><div class="src">14</div><div class="q">桑代克的猫开笼取食实验中，刺激和反应的顺序是（　）。</div><div class="opts"><button class="opt"><i>A</i>刺激在前，反应在后</button><button class="opt"><i>B</i>反应在前，刺激在后</button><button class="opt"><i>C</i>同时出现</button><button class="opt"><i>D</i>没有刺激</button></div><div class="why">先按杠杆（反应）再得食物（刺激）R→S，所以性质上属于操作性。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="0"><div class="src">15</div><div class="q">最早提出「强化」概念的是（　）。</div><div class="opts"><button class="opt"><i>A</i>巴甫洛夫</button><button class="opt"><i>B</i>斯金纳</button><button class="opt"><i>C</i>桑代克</button><button class="opt"><i>D</i>华生</button></div><div class="why">「强化」大家印象在斯金纳，但最早提出的是巴甫洛夫。<b>A</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="3"><div class="src">16</div><div class="q">狗进食摇铃实验中，铃声第一次与食物一起出现时，铃声是（　）。</div><div class="opts"><button class="opt"><i>A</i>无条件刺激</button><button class="opt"><i>B</i>条件刺激</button><button class="opt"><i>C</i>条件反应</button><button class="opt"><i>D</i>中性刺激</button></div><div class="why">此时铃声还不起作用，狗是因为食物流口水 → 中性刺激。结合 N 次后才变身条件刺激。<b>D</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="1"><div class="src">17</div><div class="q">在「铃声→流口水」建立后，再用「灯光+铃声」多次结合使灯光也能引起流口水，这属于（　）。</div><div class="opts"><button class="opt"><i>A</i>一级条件作用</button><button class="opt"><i>B</i>高级条件作用</button><button class="opt"><i>C</i>消退</button><button class="opt"><i>D</i>泛化</button></div><div class="why">灯光碰瓷的是铃声（条件刺激）→ 二级/高级。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="2"><div class="src">18</div><div class="q">「闻鸡起舞」属于（　）。</div><div class="opts"><button class="opt"><i>A</i>无条件反射</button><button class="opt"><i>B</i>第二信号系统</button><button class="opt"><i>C</i>第一信号系统</button><button class="opt"><i>D</i>操作性条件反射</button></div><div class="why">鸡叫只是个声音，鸡不会说话 → 无语言 → 第一。别和「闻过则喜」（听别人讲）混。<b>C</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="1"><div class="src">19</div><div class="q">铃声建立条件反射后，只给铃声不给食物，多次后狗不再流口水。这是（　）。</div><div class="opts"><button class="opt"><i>A</i>获得</button><button class="opt"><i>B</i>消退</button><button class="opt"><i>C</i>分化</button><button class="opt"><i>D</i>泛化</button></div><div class="why">有 → 弱 → 无，条件刺激不再伴随无条件刺激。<b>B</b></div><div class="verdict"></div></div>
+  <div class="quiz" data-a="0"><div class="src">20</div><div class="q">经典性条件作用与操作性条件作用的关系是（　）。</div><div class="opts"><button class="opt"><i>A</i>实质相同（都是 S-R 联结），建立过程不同</button><button class="opt"><i>B</i>实质不同，建立过程相同</button><button class="opt"><i>C</i>完全相同</button><button class="opt"><i>D</i>完全不同</button></div><div class="why">实质都是刺激与反应的联结；过程一个 S→R 一个 R→S。<b>A</b></div><div class="verdict"></div></div>
+  </div>
+  <div class="blk meta center" id="scorebox"><span class="lab">得分</span><div class="final-score" id="scoretxt">0 / 20</div><p class="small" id="scoremsg">做完 20 题会出现评语。</p><button class="btn ghost sm" onclick="resetFinal()">清空重做</button></div>
+
+  <div class="done-row"><button class="btn done" onclick="markDone(10)">十站全通 ✓</button><span class="msg">🎉 心理学12 通关！三天后记得回来再做一次</span></div>
+</section>
+
+<footer>
+  素材：《心理学12》视频全片文字稿 45,541 字 + 102 张幻灯片 OCR（含手写批注）。内容严格限定在老师本讲实际讲到的范围，斯金纳、班杜拉、认知/建构/人本主义留待下一讲。
+  <br>进度与答题记录保存在本机浏览器里（localStorage），换设备不同步。
+</footer>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var KEY='psy12_v2';
+  var st; try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){st={}}
+  st.done=st.done||{}; st.ans=st.ans||{};
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+  function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show')},1800)}
+  var TOTAL=11;
+  function renderProg(){
+    var n=Object.keys(st.done).length;
+    document.getElementById('progbar').style.width=(n/TOTAL*100)+'%';
+    document.getElementById('progtxt').textContent=Math.min(n,10)+' / 10 站'+(n>=TOTAL?' 🎉':'');
+    document.querySelectorAll('#sidenav a').forEach(function(a){a.classList.toggle('ok',!!st.done[a.dataset.s])});
+    document.querySelectorAll('.station').forEach(function(s){s.classList.toggle('ok',!!st.done[s.dataset.s])});
+  }
+  window.markDone=function(i){
+    var was=!!st.done[i]; st.done[i]=1; save(); renderProg();
+    if(!was){var msgs=['出发！','稳！','这一站难，你过了！','一楼逛完！','人都认全了！','驯兽师登场！','猫学会了，你也学会了！','铃声一响就会做题！','成语不再怕！','知识点全讲完！','🎉 十站全通！'];toast(msgs[i]||'通了！')}
+  };
+  // quiz
+  var quizzes=document.querySelectorAll('.quiz');
+  quizzes.forEach(function(q,idx){
+    q.dataset.qid='q'+idx;
+    var a=parseInt(q.dataset.a,10);
+    var opts=q.querySelectorAll('.opt');
+    function finish(pick){
+      q.classList.add('done');
+      opts.forEach(function(o,i){o.classList.toggle('right',i===a);o.classList.toggle('wrong',i===pick&&pick!==a);o.disabled=true});
+      q.querySelector('.verdict').textContent=pick===a?'✅ 答对了':'❌ 答错了，看解析';
+      q.querySelector('.verdict').style.color=pick===a?'var(--mint)':'var(--red)';
+    }
+    opts.forEach(function(o,i){o.addEventListener('click',function(){if(q.classList.contains('done'))return;st.ans[q.dataset.qid]=i;save();finish(i);if(q.closest('#finalquiz'))score();})});
+    if(st.ans[q.dataset.qid]!==undefined)finish(st.ans[q.dataset.qid]);
+  });
+  function score(){
+    var fq=document.querySelectorAll('#finalquiz .quiz'),n=0,d=0;
+    fq.forEach(function(q){var a=parseInt(q.dataset.a,10),p=st.ans[q.dataset.qid];if(p!==undefined){d++;if(p===a)n++}});
+    document.getElementById('scoretxt').textContent=n+' / 20';
+    var m=document.getElementById('scoremsg');
+    if(d<20){m.textContent='已答 '+d+' 题，继续。'}
+    else if(n>=18){m.textContent='🏆 '+n+' 分！这一讲已经是你的了。三天后再来一次巩固。'}
+    else if(n>=14){m.textContent='👍 '+n+' 分，基础很稳。把错的那几题对应的站再读一遍故事。'}
+    else{m.textContent='💪 '+n+' 分。别急，回到错题所在的站，先看「先听个故事」，再看「说人话」。'}
+  }
+  window.resetFinal=function(){
+    document.querySelectorAll('#finalquiz .quiz').forEach(function(q){delete st.ans[q.dataset.qid];q.classList.remove('done');q.querySelectorAll('.opt').forEach(function(o){o.classList.remove('right','wrong');o.disabled=false});q.querySelector('.verdict').textContent=''});
+    save();score();toast('已清空，重来！');
+  };
+  score(); renderProg();
+  // nav highlight
+  var links=document.querySelectorAll('#sidenav a');
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('cur',l.dataset.s===e.target.dataset.s)})}})},{rootMargin:'-30% 0px -60% 0px'});
+  document.querySelectorAll('.station').forEach(function(s){obs.observe(s)});
+})();
+</script>
+</body>
+</html>
