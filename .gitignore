@@ -10,7 +10,8 @@
 frames/
 frames12/
 work/
-out/
+*.zip
+frames_*.zip
 *.onnx
 *.pt
 *.bin
