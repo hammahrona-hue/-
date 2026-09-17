@@ -62,18 +62,22 @@ python -u scripts/run_pipeline.py \
 `scripts/SKILL.md` 里的产能数字是 **14 核**实测（2h48m 全片 26.7 分钟）。
 本沙箱 **4 vCPU ≈ 3~4 倍耗时**，2.5 小时的视频预计：
 
-| 阶段 | 14 核 | **4 vCPU 预估** |
-|---|---|---|
-| 抽音频 | 快 | 1~2 分钟 |
-| SenseVoice 转写 | 287 s | **15~20 分钟** |
-| 抽帧 | 快 | 3~5 分钟 |
-| 去重 | 31 s | 2~4 分钟 |
-| 幻灯片 OCR | 834 s（440 帧） | **40~55 分钟（大头）** |
-| 归并 | 快 | 1 分钟 |
-| **合计** | 26.7 分钟 | **约 1.5~2 小时** |
+| 阶段 | 14 核 | 4 vCPU | **1 vCPU（实测沙箱）** |
+|---|---|---|---|
+| 抽音频 | 快 | 1~2 分钟 | 2~4 分钟 |
+| SenseVoice 转写 | 287 s | 15~20 分钟 | **约 55~70 分钟** |
+| 抽帧 | 快 | 3~5 分钟 | 8~15 分钟 |
+| 去重 | 31 s | 2~4 分钟 | 5~10 分钟 |
+| 幻灯片 OCR | 834 s（440 帧） | 40~55 分钟 | **3 小时以上（会超时）** |
+| 归并 | 快 | 1 分钟 | 2 分钟 |
+| **合计** | 26.7 分钟 | 约 1.5~2 小时 | **4~5 小时** |
 
-> OCR 是大头。若担心沙箱超时：先 `--skip-frames` 出文字稿并 commit，
-> 再单独跑一次带抽帧的流程（脚本支持断点续跑，已完成的 OCR 帧会跳过）。
+> ⚠️ **实测沙箱是 1 vCPU**（2026-09-16 探针结果，虽然面板写的是 4 vCPU）。
+> **1 核下不要跑 OCR**，必然超时。策略：
+> 1. 先 `git config --global --add safe.directory '*'` 之类的前置不管，**只跑 `--skip-frames`**，
+>    约 1 小时出 `transcript.txt`，**立刻 commit 并 push**（见第 4 节）。
+> 2. OCR / 抽帧 / 出手册**不在这个沙箱做** —— 交给别的方式（见 README「算力不足时」）。
+> 3. 如果用户已把沙箱调到 4 vCPU 以上，才考虑跑完整流程。
 
 ## 4. 产出与回写
 
@@ -84,8 +88,17 @@ python -u scripts/run_pipeline.py \
 
 ```bash
 cp /work/out/transcript.txt /work/out/slides_unique.txt <repo>/   # 几百 KB，随便放
-git add -A && git commit -m "chore: <讲次名> 文字稿 + 幻灯片" && git push
+git add -A && git commit -m "chore: <讲次名> 文字稿 + 幻灯片"
 ```
+
+> ⚠️ **push 必须用 `-u origin HEAD`**，不能只写 `git push`：
+> Hoplite 会在自动创建的分支（如 `hoplite/gortyn-xxxx`）上工作，**该分支没有 upstream**，
+> 裸 `git push` 一定报 `fatal: The current branch ... has no upstream branch`（exit 128）。
+>
+> ```bash
+> git push -u origin HEAD          # ✅ 正确
+> git push                          # ❌ 必失败
+> ```
 
 > ⚠️ **绝不要把视频本体、frames/、audio16k.wav 提交进 git。**
 > 它们会撑爆仓库并触发每晚重烘焙下载。`.gitignore` 已经挡住了，别手动 `git add -f`。

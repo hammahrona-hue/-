@@ -11,6 +11,20 @@
 ## 给 Agent 的入口
 
 先读 [`CLAUDE.md`](CLAUDE.md)，按里面的顺序执行。
+首次使用建议先跑 [`PROBE.md`](PROBE.md) / [`PROBE2.md`](PROBE2.md) 两个只读探针验证沙箱能力。
+
+## 算力不足时（实测沙箱 = 1 vCPU）
+
+面板标称 4 vCPU，但 2026-09-16 探针实测 `nproc` = 1。
+**1 核下切片 OCR 要 3 小时以上，必然超时**，所以分工改成：
+
+| 环节 | 在哪做 | 耗时 |
+|---|---|---|
+| 抽音频 + SenseVoice 转写 | Hoplite 沙箱（`--skip-frames`） | 约 1 小时 |
+| 抽帧 + 幻灯片 OCR + 出手册 | **本机 14 核** | 约 20 分钟 |
+
+沙箱只负责产出 `transcript.txt` 并 `git push -u origin HEAD`；
+文稿回到本机后，用 `scripts/run_pipeline.py` 或直接基于文稿 + 抽帧结果写手册。
 
 ## 目录
 
