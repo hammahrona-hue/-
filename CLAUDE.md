@@ -27,7 +27,16 @@ bash setup.sh
 bash fetch_video.sh          # 下载到 /work/video/，并打印绝对路径
 ```
 
-下载用的是 Release 附件公网直链，**不需要 token**。若带宽慢，用 `curl -C -` 断点续传。
+下载用的是 Release 附件公网直链，**不需要 token**（`fetch_video.sh` 直接用 API 返回的
+`browser_download_url`，中文文件名不需要自己拼 URL）。若中断，脚本带 `-C -` 断点续传，重跑即可。
+
+**当前 release `v1` 里的东西**
+
+| 附件名 | 内容 |
+|---|---|
+| `psychology-12.mov` | 2025年下教师编制课程 · 心理学12｜02:42:16｜552,772,816 字节（527 MiB）｜HEVC 1920×888 + AAC 44.1kHz stereo |
+
+换视频时改 `TAG` 或 `ASSET` 环境变量，例如 `ASSET=psychology-13.mov bash fetch_video.sh`。
 
 ## 2. 跑流水线
 
