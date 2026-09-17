@@ -1,0 +1,22 @@
+# 视频本体 / 中间产物：绝不进 git
+*.mov
+*.mp4
+*.mkv
+*.avi
+*.wmv
+*.flv
+*.m4v
+*.wav
+frames/
+frames12/
+work/
+out/
+*.onnx
+*.pt
+*.bin
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

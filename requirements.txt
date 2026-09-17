@@ -1,0 +1,7 @@
+# Hoplite 沙箱（4 vCPU / 8 GiB / 无 GPU）依赖。CPU int8，一律不装 CUDA 版。
+numpy<2
+soundfile
+Pillow
+sherpa-onnx
+rapidocr-onnxruntime
+faster-whisper
